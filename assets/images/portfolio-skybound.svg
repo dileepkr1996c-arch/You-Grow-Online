@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logistics-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#logistics-grad)" />
+
+  <!-- Logistics Network Lines -->
+  <g opacity="0.15" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4 4">
+    <circle cx="200" cy="150" r="6" fill="#ffffff" />
+    <circle cx="550" cy="180" r="6" fill="#ffffff" />
+    <circle cx="350" cy="320" r="6" fill="#ffffff" />
+    <circle cx="620" cy="300" r="6" fill="#ffffff" />
+    
+    <path d="M 200 150 Q 375 100 550 180 T 620 300" fill="none" />
+    <path d="M 200 150 Q 275 235 350 320 T 620 300" fill="none" />
+    <path d="M 350 320 L 550 180" fill="none" />
+  </g>
+
+  <!-- SkyBound Web App wireframe -->
+  <rect x="150" y="80" width="500" height="300" rx="14" fill="#0f172a" stroke="#fbbf24" stroke-width="2" />
+  <rect x="150" y="80" width="500" height="40" rx="14" fill="#1e293b" />
+  
+  <!-- Navigation bar buttons -->
+  <circle cx="175" cy="100" r="5" fill="#ef4444" />
+  <circle cx="190" cy="100" r="5" fill="#eab308" />
+  <circle cx="205" cy="100" r="5" fill="#10b981" />
+  <text x="400" y="105" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#94a3b8" text-anchor="middle">portal.skyboundlogistics.com</text>
+
+  <!-- Left Sidebar Panel layout list -->
+  <rect x="170" y="140" width="120" height="220" rx="8" fill="#1e293b" opacity="0.6" />
+  <rect x="182" y="160" width="96" height="12" rx="4" fill="url(#gold-grad)" />
+  <rect x="182" y="185" width="80" height="8" rx="3" fill="#334155" />
+  <rect x="182" y="205" width="88" height="8" rx="3" fill="#334155" />
+  <rect x="182" y="225" width="60" height="8" rx="3" fill="#334155" />
+
+  <!-- Middle pricing estimator block -->
+  <rect x="305" y="140" width="325" height="220" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+  <text x="325" y="175" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="16" fill="#ffffff">Interactive Estimator</text>
+  <text x="325" y="195" font-family="'Inter', sans-serif" font-weight="500" font-size="11" fill="#94a3b8">FREIGHT PRICE ROUTING CALCULATOR</text>
+  
+  <!-- Interactive sliders representations -->
+  <rect x="325" y="220" width="285" height="6" rx="3" fill="#0f172a" />
+  <rect x="325" y="220" width="180" height="6" rx="3" fill="#fbbf24" />
+  <circle cx="505" cy="223" r="8" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+
+  <rect x="325" y="255" width="285" height="6" rx="3" fill="#0f172a" />
+  <rect x="325" y="255" width="120" height="6" rx="3" fill="#fbbf24" />
+  <circle cx="445" cy="258" r="8" fill="#ffffff" stroke="#d97706" stroke-width="2" />
+
+  <!-- Total cost metrics indicators -->
+  <rect x="325" y="290" width="130" height="50" rx="6" fill="#0f172a" />
+  <text x="340" y="312" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="13" fill="#94a3b8">ESTIMATED</text>
+  <text x="340" y="331" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="16" fill="#f59e0b">₹48,500</text>
+
+  <rect x="470" y="290" width="140" height="50" rx="6" fill="#fbbf24" />
+  <text x="540" y="321" font-family="'Inter', sans-serif" font-weight="800" font-size="13" fill="#1e3a8a" text-anchor="middle">BOOK ROUTE</text>
+</svg>

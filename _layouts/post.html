@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<article class="section blog-post-page">
+  <div class="container">
+    <div class="blog-post-content">
+      <a href="/blog/" class="blog-post-back"><i class="fa-solid fa-arrow-left"></i> Back to Blog</a>
+
+      <div class="blog-post-image">
+        <img src="{{ page.image }}" alt="{{ page.title | escape }}">
+      </div>
+
+      <h1>{{ page.title }}</h1>
+
+      <div class="blog-post-meta">
+        <span><i class="fa-regular fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.author %}
+        <span><i class="fa-regular fa-user"></i> {{ page.author }}</span>
+        {% endif %}
+        {% if page.categories %}
+        <span><i class="fa-regular fa-folder"></i> {{ page.categories | join: ', ' }}</span>
+        {% endif %}
+      </div>
+
+      <div class="blog-post-body">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free UTM URL Builder — Track Campaign Links | You Grow Online</title>
+  <meta name="description" content="Create trackable UTM URLs for Google Analytics. Free UTM link builder tool with source, medium, and campaign parameters. Copy and use in your marketing campaigns.">
+  <meta name="keywords" content="utm url builder, utm link creator, campaign url builder, google analytics tracking, utm parameters, free marketing tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/utm-url-builder/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free UTM URL Builder — Create Trackable Campaign Links">
+  <meta property="og:description" content="Build UTM-tagged URLs for your marketing campaigns. Track traffic from email, social media, and ads in Google Analytics.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/utm-url-builder/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free UTM URL Builder for Campaign Tracking">
+  <meta name="twitter:description" content="Generate UTM-tagged URLs easily. Track your marketing campaigns in Google Analytics.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper">
+          <div class="logo-text">You <span>Grow</span> Online</div>
+          <span class="logo-tagline">Digital Solution Agency</span>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/portfolio.html" class="nav-link">Portfolio</a>
+        <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/tools/" class="nav-link">Free Tools</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Free UTM Link Creator</h1>
+      <p>Build trackable UTM URLs for your marketing campaigns. Measure traffic from email, social media, Google Ads, and more in Google Analytics 4.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tool-interface">
+        <div class="form-group">
+          <label for="utm-url">Website URL *</label>
+          <input type="url" id="utm-url" placeholder="https://yourwebsite.com/page" oninput="generateUTM()">
+        </div>
+
+        <div class="form-group">
+          <label for="utm-source">Campaign Source * (e.g., google, newsletter, facebook)</label>
+          <input type="text" id="utm-source" placeholder="google" oninput="generateUTM()">
+        </div>
+
+        <div class="form-group">
+          <label for="utm-medium">Campaign Medium * (e.g., cpc, email, social)</label>
+          <input type="text" id="utm-medium" placeholder="cpc" oninput="generateUTM()">
+        </div>
+
+        <div class="form-group">
+          <label for="utm-campaign">Campaign Name * (e.g., spring-sale, product-launch)</label>
+          <input type="text" id="utm-campaign" placeholder="spring-sale" oninput="generateUTM()">
+        </div>
+
+        <div class="form-group">
+          <label for="utm-term">Campaign Term (optional — for paid keywords)</label>
+          <input type="text" id="utm-term" placeholder="web+development+services" oninput="generateUTM()">
+        </div>
+
+        <div class="form-group">
+          <label for="utm-content">Campaign Content (optional — for A/B testing)</label>
+          <input type="text" id="utm-content" placeholder="hero-button-v1" oninput="generateUTM()">
+        </div>
+
+        <div class="form-group">
+          <label>Generated UTM URL</label>
+          <div class="tool-output" id="utm-output">Fill in the required fields above to generate your UTM URL<button class="copy-btn" onclick="copyUTM()"><i class="fa-regular fa-copy"></i> Copy</button></div>
+        </div>
+      </div>
+
+      <!-- Educational Guide -->
+      <div class="guide-content">
+        <h2>What Is a UTM URL and How Does It Improve Your Marketing Analytics?</h2>
+
+        <p>A UTM (Urchin Tracking Module) URL is a regular website URL with additional parameters appended to the end that help analytics platforms like Google Analytics 4 identify exactly where your traffic is coming from. When a user clicks on a UTM-tagged link, the parameters are sent to your analytics tool, allowing you to see which specific campaigns, channels, and even individual links are driving traffic, conversions, and revenue. Without UTM parameters, all traffic from external sources gets lumped into generic categories, making it nearly impossible to measure the true performance of your marketing efforts.</p>
+
+        <p>UTM parameters consist of five key components: <strong>utm_source</strong> identifies the platform sending traffic (e.g., google, facebook, newsletter), <strong>utm_medium</strong> describes the marketing channel (e.g., cpc, email, social, banner), <strong>utm_campaign</strong> names the specific campaign (e.g., summer-sale-2026, product-launch), <strong>utm_term</strong> is used for paid search keywords, and <strong>utm_content</strong> differentiates between links within the same campaign for A/B testing. Together, these five parameters give you a complete picture of your marketing performance at a granular level.</p>
+
+        <h3>Why Every Marketer Needs UTM URLs</h3>
+        <p>If you are investing in digital marketing — whether it is Google Ads, Facebook Ads, email marketing, influencer partnerships, or social media organic posts — you need to know which channels are delivering results. Raw traffic numbers are not enough. You need to understand which sources drive the highest engagement, longest session duration, and most conversions. UTM parameters make this possible by tagging each link with its own unique identifier. This data feeds directly into Google Analytics, allowing you to create custom reports, set up conversion goals, and calculate ROI for each channel.</p>
+
+        <p>Without UTM tagging, you are essentially marketing in the dark. For example, if you share the same link in your email newsletter and on Facebook, Google Analytics will show traffic from "direct" or "social" without distinguishing which campaign or specific post drove the visit. With UTM parameters, you can see that "email-newsletter-may-2026" drove 500 visits with a 5% conversion rate, while "facebook-post-may-2026" drove 300 visits with a 2% conversion rate. This insight lets you allocate your budget and effort to the channels that actually work.</p>
+
+        <h3>Best Practices for UTM Parameter Naming</h3>
+        <p>Consistency is critical when using UTM parameters. Establish a naming convention for your team and stick to it. Use lowercase letters, replace spaces with hyphens or plus signs, and avoid changing parameter names mid-campaign. A consistent naming structure like <code>source_medium_campaign</code> ensures your analytics reports are clean, sortable, and actionable. Our free UTM URL builder handles the formatting automatically — just fill in the fields, copy the generated URL, and use it in your campaigns.</p>
+      </div>
+
+      <!-- Lead Capture -->
+      <div class="lead-capture">
+        <h3>Want to grow your business online?</h3>
+        <p>Get a free consultation from our digital marketing experts. We will help you set up campaign tracking, optimize your ads, and maximize your ROI.</p>
+        <form action="/contact.html" method="GET">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
+        </form>
+      </div>
+
+      <!-- Internal Links -->
+      <div class="internal-links">
+        <h4>Explore More Free Tools</h4>
+        <a href="/tools/">All Tools</a>
+        <a href="/tools/meta-tag-generator/">Meta Tag Generator</a>
+        <a href="/tools/character-counter/">Character & Word Counter</a>
+        <a href="/tools/url-slug-generator/">URL Slug Generator</a>
+        <a href="/blog/">Read Our Blog</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper">
+              <div class="logo-text">You <span>Grow</span> Online</div>
+              <span class="logo-tagline">Digital Solution Agency</span>
+            </div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services.html">Web Development</a></li>
+            <li><a href="/services.html">Ecommerce Development</a></li>
+            <li><a href="/services.html">Custom Software</a></li>
+            <li><a href="/services.html">Digital Marketing</a></li>
+            <li><a href="/services.html">AI Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/tools/">Free Tools</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li>
+            <li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li>
+            <li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 You Grow Online. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateUTM() {
+      const url = document.getElementById('utm-url').value.trim();
+      const source = document.getElementById('utm-source').value.trim();
+      const medium = document.getElementById('utm-medium').value.trim();
+      const campaign = document.getElementById('utm-campaign').value.trim();
+      const term = document.getElementById('utm-term').value.trim();
+      const content = document.getElementById('utm-content').value.trim();
+
+      if (!url || !source || !medium || !campaign) {
+        document.getElementById('utm-output').innerHTML = 'Fill in the required fields above to generate your UTM URL<button class="copy-btn" onclick="copyUTM()"><i class="fa-regular fa-copy"></i> Copy</button>';
+        return;
+      }
+
+      const encodedUrl = url.replace(/[?&]$/, '');
+      const hasParams = encodedUrl.includes('?');
+      let utm = encodedUrl + (hasParams ? '&' : '?');
+      utm += 'utm_source=' + encodeURIComponent(source);
+      utm += '&utm_medium=' + encodeURIComponent(medium);
+      utm += '&utm_campaign=' + encodeURIComponent(campaign);
+      if (term) utm += '&utm_term=' + encodeURIComponent(term);
+      if (content) utm += '&utm_content=' + encodeURIComponent(content);
+
+      document.getElementById('utm-output').innerHTML = '<button class="copy-btn" onclick="copyUTM()"><i class="fa-regular fa-copy"></i> Copy</button>' + '<span>' + escapeHtml(utm) + '</span>';
+    }
+
+    function copyUTM() {
+      const text = document.getElementById('utm-output').textContent.replace('Copy', '').trim();
+      navigator.clipboard.writeText(text).then(function() {
+        const btn = document.querySelector('#utm-output .copy-btn');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        setTimeout(function() { btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy'; }, 2000);
+      });
+    }
+
+    function escapeHtml(str) {
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

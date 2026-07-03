@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Meta Tag Generator — SEO HTML Tags Tool | You Grow Online</title>
+  <meta name="description" content="Generate SEO-optimized HTML meta tags for title, description, and keywords. Free online meta tag generator tool by You Grow Online. Copy and paste into your website.">
+  <meta name="keywords" content="meta tag generator, seo meta tags, html meta tags, title tag generator, meta description generator, free seo tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/meta-tag-generator/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Meta Tag Generator — SEO HTML Tags for Your Website">
+  <meta property="og:description" content="Generate SEO-friendly HTML meta tags instantly. Create title, description, and keyword meta tags for your web pages.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/meta-tag-generator/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Generate SEO Meta Tags Free Online">
+  <meta name="twitter:description" content="Create perfect HTML meta tags for your website with our free SEO meta tag generator.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper">
+          <div class="logo-text">You <span>Grow</span> Online</div>
+          <span class="logo-tagline">Digital Solution Agency</span>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/portfolio.html" class="nav-link">Portfolio</a>
+        <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/tools/" class="nav-link">Free Tools</a>
+        <a href="/about.html" class="nav-link">About</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>Free Meta Tag Generator</h1>
+      <p>Generate SEO-optimized HTML meta tags for your web pages. Fill in the fields below and copy the output directly into your website.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tool-interface">
+        <div class="form-group">
+          <label for="meta-title">Page Title (Title Tag)</label>
+          <input type="text" id="meta-title" placeholder="Enter your page title (recommended: 50-60 characters)" oninput="generateMetaTags()">
+          <div class="counter-indicator" style="margin-top:8px;">
+            <div class="counter-indicator-bar" id="meta-title-bar" style="width:0%;"></div>
+          </div>
+          <small style="color:var(--text-muted);font-size:0.78rem;" id="meta-title-count">0 / 60 characters</small>
+        </div>
+
+        <div class="form-group">
+          <label for="meta-desc">Meta Description</label>
+          <textarea id="meta-desc" placeholder="Enter your meta description (recommended: 150-160 characters)" oninput="generateMetaTags()" rows="3"></textarea>
+          <div class="counter-indicator" style="margin-top:8px;">
+            <div class="counter-indicator-bar" id="meta-desc-bar" style="width:0%;"></div>
+          </div>
+          <small style="color:var(--text-muted);font-size:0.78rem;" id="meta-desc-count">0 / 160 characters</small>
+        </div>
+
+        <div class="form-group">
+          <label for="meta-keywords">Meta Keywords (comma-separated)</label>
+          <input type="text" id="meta-keywords" placeholder="keyword1, keyword2, keyword3" oninput="generateMetaTags()">
+        </div>
+
+        <div class="form-group">
+          <label>Generated HTML Meta Tags</label>
+          <div class="tool-output" id="meta-output">&lt;!-- Your meta tags will appear here --&gt;<button class="copy-btn" onclick="copyMetaOutput()"><i class="fa-regular fa-copy"></i> Copy</button></div>
+        </div>
+      </div>
+
+      <!-- Educational Guide -->
+      <div class="guide-content">
+        <h2>What Are HTML Meta Tags and Why Do They Matter for SEO?</h2>
+
+        <p>Meta tags are snippets of HTML code that provide information about a web page to search engines and website visitors. While they are not visible on the page itself, they are embedded in the <code>&lt;head&gt;</code> section of your HTML document and play a critical role in how search engines like Google understand, index, and display your content in search results. A well-optimized meta tag can be the difference between a user clicking on your link or scrolling past it.</p>
+
+        <p>The three most important meta tags for SEO are the <strong>title tag</strong>, the <strong>meta description</strong>, and the <strong>meta keywords</strong> tag. The title tag appears as the clickable headline in search engine results pages (SERPs) and is one of the strongest on-page SEO signals. Google recommends keeping title tags under 60 characters to ensure they are not truncated in search results. The meta description, while not a direct ranking factor, influences click-through rate (CTR) — a well-written description of 150-160 characters can significantly increase the number of people who visit your site.</p>
+
+        <h3>Best Practices for Meta Tags in 2026</h3>
+        <p>Creating effective meta tags requires a strategic approach. Your title tag should include your primary keyword near the beginning, followed by your brand name. For example, "Web Design Services in India | You Grow Online" is more effective than "You Grow Online | Web Design Services in India." Each page on your website should have a unique title tag and meta description that accurately reflects its content. Duplicate meta tags can confuse search engines and hurt your rankings.</p>
+
+        <p>The meta description should be a compelling summary that includes your target keyword naturally and contains a call to action. Think of it as your free advertising space in Google — every word counts. While Google sometimes rewrites meta descriptions, providing a well-crafted one increases the chances that your preferred description will appear. For the meta keywords tag, while Google officially stopped using it as a ranking signal years ago, some other search engines and directory services still reference it, so including relevant keywords can still provide marginal benefits.</p>
+
+        <h3>How Our Meta Tag Generator Works</h3>
+        <p>Our free online meta tag generator simplifies the entire process. Simply enter your page title, meta description, and keywords into the input fields, and the tool instantly generates properly formatted HTML meta tags that you can copy and paste directly into the <code>&lt;head&gt;</code> section of your web page. The tool also includes real-time character counters for your title and description, helping you stay within Google's recommended limits. This ensures your meta tags are optimized for search engines before you even publish them.</p>
+
+        <p>Use this meta tag generator every time you create a new page, blog post, or product listing on your website. Consistent, well-optimized meta tags across all your pages signal professionalism to both search engines and users, improving your site's overall SEO performance and driving more organic traffic to your business.</p>
+      </div>
+
+      <!-- Lead Capture -->
+      <div class="lead-capture">
+        <h3>Want to grow your business online?</h3>
+        <p>Get a free consultation from our digital marketing experts. We will help you optimize your website, improve your SEO, and drive more traffic.</p>
+        <form action="/contact.html" method="GET">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
+        </form>
+      </div>
+
+      <!-- Internal Links -->
+      <div class="internal-links">
+        <h4>Explore More Free Tools</h4>
+        <a href="/tools/">All Tools</a>
+        <a href="/tools/utm-url-builder/">UTM Link Creator</a>
+        <a href="/tools/character-counter/">Character & Word Counter</a>
+        <a href="/tools/url-slug-generator/">URL Slug Generator</a>
+        <a href="/blog/">Read Our Blog</a>
+        <a href="/contact.html">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper">
+              <div class="logo-text">You <span>Grow</span> Online</div>
+              <span class="logo-tagline">Digital Solution Agency</span>
+            </div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services.html">Web Development</a></li>
+            <li><a href="/services.html">Ecommerce Development</a></li>
+            <li><a href="/services.html">Custom Software</a></li>
+            <li><a href="/services.html">Digital Marketing</a></li>
+            <li><a href="/services.html">AI Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/portfolio.html">Portfolio</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/tools/">Free Tools</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li>
+            <li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li>
+            <li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 You Grow Online. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function generateMetaTags() {
+      const title = document.getElementById('meta-title').value;
+      const desc = document.getElementById('meta-desc').value;
+      const keywords = document.getElementById('meta-keywords').value;
+
+      // Title counter
+      const titleLen = title.length;
+      const titleEl = document.getElementById('meta-title-count');
+      titleEl.textContent = titleLen + ' / 60 characters';
+      const titleBar = document.getElementById('meta-title-bar');
+      const titlePct = Math.min((titleLen / 60) * 100, 100);
+      titleBar.style.width = titlePct + '%';
+      titleBar.style.background = titleLen > 60 ? 'var(--error)' : titleLen > 50 ? 'var(--warning)' : 'var(--accent-gradient)';
+
+      // Desc counter
+      const descLen = desc.length;
+      const descEl = document.getElementById('meta-desc-count');
+      descEl.textContent = descLen + ' / 160 characters';
+      const descBar = document.getElementById('meta-desc-bar');
+      const descPct = Math.min((descLen / 160) * 100, 100);
+      descBar.style.width = descPct + '%';
+      descBar.style.background = descLen > 160 ? 'var(--error)' : descLen > 150 ? 'var(--warning)' : 'var(--accent-gradient)';
+
+      let output = '';
+      if (title) {
+        output += '<title>' + escapeHtml(title) + '</title>\n';
+        output += '<meta name="title" content="' + escapeHtml(title) + '">\n';
+      }
+      if (desc) {
+        output += '<meta name="description" content="' + escapeHtml(desc) + '">\n';
+      }
+      if (keywords) {
+        output += '<meta name="keywords" content="' + escapeHtml(keywords) + '">\n';
+      }
+      if (!output) {
+        output = '<!-- Fill in the fields above to generate meta tags -->';
+      }
+      document.getElementById('meta-output').innerHTML = '<button class="copy-btn" onclick="copyMetaOutput()"><i class="fa-regular fa-copy"></i> Copy</button>' + '<span>' + escapeHtml(output) + '</span>';
+    }
+
+    function copyMetaOutput() {
+      const text = document.getElementById('meta-output').textContent.replace('Copy', '').trim();
+      navigator.clipboard.writeText(text).then(function() {
+        const btn = document.querySelector('#meta-output .copy-btn');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        setTimeout(function() { btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy'; }, 2000);
+      });
+    }
+
+    function escapeHtml(str) {
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

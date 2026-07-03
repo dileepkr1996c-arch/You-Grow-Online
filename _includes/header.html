@@ -1,0 +1,30 @@
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="/" class="logo" aria-label="You Grow Online Home">
+      <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+      <div class="logo-wrapper">
+        <div class="logo-text">You <span>Grow</span> Online</div>
+        <span class="logo-tagline">Digital Solution Agency</span>
+      </div>
+    </a>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+      <a href="/services.html" class="nav-link{% if page.url == '/services.html' %} active{% endif %}">Services</a>
+      <a href="/portfolio.html" class="nav-link{% if page.url == '/portfolio.html' %} active{% endif %}">Portfolio</a>
+      <a href="/#pricing" class="nav-link">Pricing</a>
+      <a href="/blog/" class="nav-link{% if page.url contains '/blog/' %} active{% endif %}">Blog</a>
+      <a href="/tools/" class="nav-link{% if page.url contains '/tools/' %} active{% endif %}">Free Tools</a>
+      <a href="/about.html" class="nav-link{% if page.url == '/about.html' %} active{% endif %}">About</a>
+      <a href="/contact.html" class="nav-link{% if page.url == '/contact.html' %} active{% endif %}">Contact</a>
+      <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+    </nav>
+    <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
