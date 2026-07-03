@@ -3,8 +3,8 @@ layout: post
 title: How to Integrate AI Chatbots Into Your Website
 description: A step-by-step guide on adding AI-powered chatbots to your website
   to improve customer service and boost conversions.
-date: 2026-05-20
-image: assets/images/file_000000008a6c72069753242024abe401.png?w=800&q=80
+date: 2026-07-04T00:22:00.000+05:30
+image: assets/images/how-to-integrate-ai-chatbots-into-your-website.webp
 categories: ai
 ---
 
