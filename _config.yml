@@ -15,6 +15,9 @@ permalink: /blog/:title/
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-include-cache
 
 # Exclude from processing
 exclude:
