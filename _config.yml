@@ -1,11 +1,11 @@
-title: You Grow Online
-tagline: Digital Solution Agency
+title: Digital Solution Agency
 description: >-
   Premium digital agency building modern websites, ecommerce stores, custom software,
   and data-driven marketing campaigns. Google Ads, Facebook Ads, SEO & AI solutions.
 url: https://yougrowonline.in
 baseurl: ""
 lang: en
+timezone: "Asia/Kolkata"
 
 # Build settings
 markdown: kramdown
@@ -52,8 +52,3 @@ social:
     - https://linkedin.com/company/yougrowonline
 
 logo: /assets/images/logo.png
-
-format: "YYYY-MM-DD HH:mm:ss"
-    date_format: "YYYY-MM-DD"
-
-    - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD" }
