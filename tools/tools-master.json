@@ -56,7 +56,8 @@
       { "title": "Text Diff Checker", "desc": "Compare two text blocks side-by-side with highlighted differences.", "icon_class": "fas fa-not-equal", "link": "/tools/text-diff-checker/" },
       { "title": "Grammar Checker", "desc": "Check text for common grammar and punctuation issues.", "icon_class": "fas fa-check-circle", "link": "#" },
       { "title": "Text Repeater", "desc": "Repeat any text or word a specified number of times.", "icon_class": "fas fa-redo-alt", "link": "#" },
-      { "title": "Word Cloud Generator", "desc": "Generate a word cloud from any text or article content.", "icon_class": "fas fa-cloud", "link": "#" }
+      { "title": "Word Cloud Generator", "desc": "Generate a word cloud from any text or article content.", "icon_class": "fas fa-cloud", "link": "#" },
+      { "title": "Blog Image Processor", "desc": "Upload an image, enter your blog title, and auto-convert to WebP with the correct filename.", "icon_class": "fas fa-camera", "link": "/tools/blog-image-processor/" }
     ],
     "dev-tools": [
       { "title": "JSON Formatter & Validator", "desc": "Format, minify, and validate JSON data with syntax highlighting.", "icon_class": "fas fa-file-code", "link": "/tools/json-formatter/" },
