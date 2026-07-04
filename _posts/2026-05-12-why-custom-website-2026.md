@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Why Your Business Needs a Custom Website in 2026"
-description: "Learn why off-the-shelf templates no longer cut it and how a custom-built website can give your business a competitive edge."
-date: 2026-05-12
+title: Why Your Business Needs a Custom Website in 2026
+description: Learn why off-the-shelf templates no longer cut it and how a
+  custom-built website can give your business a competitive edge.
+date: 2026-07-04T18:07:00.000+05:30
 image: https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80
 categories: web-development
 ---
