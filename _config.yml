@@ -53,4 +53,7 @@ social:
 
 logo: /assets/images/logo.png
 
-timezone: Asia/Kolkata
+format: "YYYY-MM-DD HH:mm:ss"
+    date_format: "YYYY-MM-DD"
+
+    - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "YYYY-MM-DD" }
