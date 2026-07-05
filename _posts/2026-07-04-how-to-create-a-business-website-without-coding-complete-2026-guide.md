@@ -1,11 +1,10 @@
 ---
 title: How to Create a Business Website Without Coding (Complete 2026 Guide)
+date: 2026-07-04 20:15:00
+image: /assets/images/how-to-create-a-business-website-without-coding.webp
 description: Learn how to create a professional business website without coding.
   Step-by-step guide covering domain, hosting, AI website builders, SEO, and
   online growth in 2026.
-date: 2026-07-04 20:15:00
-image: >
-  assets/images/how-to-create-a-business-website-without-coding-complete-2026-guide.webp
 tags:
   - create business website without coding
   - business website
