@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dileepkr1996c-arch/You-Grow-Online
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app 
+  use_device_flow: true
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
@@ -14,20 +14,13 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      # --- Hidden Auto Settings ---
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Robots Settings", name: "robots", widget: "hidden", default: "index, follow" }
-      
-      # --- Main Blog Info ---
-      - { label: "Blog Title (H1)", name: "title", widget: "string", hint: "यह वेबसाइट का मुख्य हेडिंग और गूगल का डिफ़ॉल्ट SEO Title बनेगा।" }
+      - { label: "Blog Title (H1)", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image (Thumbnail)", name: "image", widget: "image", hint: "ब्लॉग की मुख्य फोटो। यही फोटो गूगल इमेज सर्च और सोशल मीडिया लिंक्स में ऑटोमैटिक दिखेगी।" }
-      - { label: "Short Description (Meta Description)", name: "description", widget: "text", hint: "150 अक्षरों का छोटा विवरण। यह गूगल सर्च रिज़ल्ट और सोशल मीडिया शेयरिंग में ऑटोमैटिक पैराग्राफ बनेगा।" }
-      
-      # --- Optional Advanced SEO (सिर्फ तब भरें जब कस्टमाइज़ करना हो, वरना छोड़ दें) ---
-      - { label: "Custom SEO Title (Optional)", name: "meta_title", widget: "string", required: false, hint: "अगर गूगल के लिए कोई अलग टाइटल रखना हो, वरना मुख्य टाइटल ही ऑटो-लोडेड रहेगा।" }
-      - { label: "Keywords (Optional)", name: "keywords", widget: "string", required: false, hint: "कॉमा (,) लगाकर मुख्य कीवर्ड्स लिखें जो इस पोस्ट के लिए ज़रूरी हैं।" }
-      - { label: "Author Name (Optional)", name: "author", widget: "string", required: false, default: "You Grow Online", hint: "लेखक का नाम जो गूगल स्कीमा डेटा के लिए अच्छा होता है।" }
-      
-      # --- Content Body ---
-      - { label: "Blog Body Content", name: "body", widget: "markdown", hint: "यहाँ अपना पूरा ब्लॉग लिखें। बेस्ट SEO के लिए अंदर के हेडिंग्स को H2 या H3 रखें।" }
+      - { label: "Featured Image (Thumbnail)", name: "image", widget: "image" }
+      - { label: "Short Description (Meta Description)", name: "description", widget: "text" }
+      - { label: "Custom SEO Title (Optional)", name: "meta_title", widget: "string", required: false }
+      - { label: "Keywords (Optional)", name: "keywords", widget: "string", required: false }
+      - { label: "Author Name (Optional)", name: "author", widget: "string", required: false, default: "You Grow Online" }
+      - { label: "Blog Body Content", name: "body", widget: "markdown" }
