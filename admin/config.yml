@@ -20,7 +20,4 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image (Thumbnail)", name: "image", widget: "image" }
       - { label: "Short Description (Meta Description)", name: "description", widget: "text" }
-      - { label: "Custom SEO Title (Optional)", name: "meta_title", widget: "string", required: false }
-      - { label: "Keywords (Optional)", name: "keywords", widget: "string", required: false }
-      - { label: "Author Name (Optional)", name: "author", widget: "string", required: false, default: "You Grow Online" }
       - { label: "Blog Body Content", name: "body", widget: "markdown" }
