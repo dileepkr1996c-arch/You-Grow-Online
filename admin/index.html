@@ -8,5 +8,13 @@
   <body>
     <!-- Decap CMS Script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    
+    <script>
+      // यह स्क्रिप्ट ब्राउज़र को नेटलिफाई का पुराना डेटा ढूंढने से रोकेगी
+      if (window.localStorage) {
+        window.localStorage.removeItem('netlifySiteURL');
+        window.localStorage.clear();
+      }
+    </script>
   </body>
 </html>
