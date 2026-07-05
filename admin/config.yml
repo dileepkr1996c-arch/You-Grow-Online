@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dileepkr1996c-arch/You-Grow-Online
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app # <-- यह लाइन यहाँ जोड़ दें
+  base_url: https://decap-cms-oauth-provider.vercel.app 
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
