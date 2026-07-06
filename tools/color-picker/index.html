@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Image Color Picker — Extract HEX RGB from Image | You Grow Online</title>
+  <meta name="description" content="Upload any image and extract exact HEX and RGB color codes instantly. Free online color picker tool for brand assets, logos, and designs.">
+  <meta name="keywords" content="image color picker, extract colors from image, hex color picker, rgb color picker, color extractor, brand colors, free design tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/color-picker/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Image Color Picker — Extract HEX RGB Codes">
+  <meta property="og:description" content="Upload any image and extract exact HEX and RGB color codes instantly. Free online color extraction tool.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/color-picker/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Image Color Picker">
+  <meta name="twitter:description" content="Extract HEX and RGB color codes from any image instantly.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+  <style>
+    .color-swatches { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .color-swatch { width: 80px; text-align: center; }
+    .color-swatch .swatch-box { width: 80px; height: 80px; border-radius: var(--radius-sm); border: 1px solid var(--border-color); cursor: pointer; transition: var(--transition); }
+    .color-swatch .swatch-box:hover { transform: scale(1.1); }
+    .color-swatch .swatch-hex { font-size: 0.72rem; font-weight: 600; color: var(--text-primary); margin-top: 4px; font-family: Consolas,Monaco,monospace; }
+  </style>
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a> <a href="/services.html" class="nav-link">Services</a> <a href="/portfolio.html" class="nav-link">Portfolio</a> <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="/blog/" class="nav-link">Blog</a> <a href="/tools/" class="nav-link">Free Tools</a> <a href="/about.html" class="nav-link">About</a> <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+  <section class="page-header"><div class="container"><h1>Free Image Color Picker</h1><p>Upload any image and extract exact HEX and RGB color codes instantly. Perfect for building brand color palettes from logos and designs.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="tool-interface">
+      <div class="drop-zone" id="dropZone">
+        <i class="fa-solid fa-image"></i>
+        <p>Upload an image to extract its colors</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">Supports JPG, PNG, WebP — up to 20MB</p>
+        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+        <button class="btn btn-primary">Choose Image</button>
+      </div>
+      <div id="colorResults" style="display:none;">
+        <div style="margin-top:20px;"><img id="previewImage" style="max-width:100%;max-height:300px;border-radius:var(--radius-sm);border:1px solid var(--border-color);"></div>
+        <div class="color-swatches" id="colorSwatches"></div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:12px;">Click any color swatch to copy its HEX code</p>
+      </div>
+      <div class="lead-capture" style="margin-top:24px;">
+        <h3>Want to scale your business online?</h3>
+        <p>Get a free professional consultation from You-Grow-Online experts. We help brands create stunning, consistent visual identities.</p>
+        <form action="/contact.html" method="GET">
+          <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required></div>
+          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
+        </form>
+      </div>
+    </div>
+    <div class="guide-content">
+      <h2>Why Extract Colors from Images? A Complete Guide to Building Your Brand Color Palette</h2>
+      <p>Color is one of the most powerful tools in branding and marketing. Studies show that color increases brand recognition by up to 80%, and consistent use of brand colors across all platforms can increase revenue by up to 33%. When you have a logo, product image, or inspiration photo, extracting the exact colors from that image is the first step to building a cohesive brand color palette. Our free image color picker makes this process instant and accurate — simply upload any image and get the precise HEX and RGB color codes for every color in the image.</p>
+      <p>Whether you are a graphic designer, web developer, social media manager, or business owner, having the exact color codes from your brand assets is essential. You need these codes to match your website design, social media graphics, email templates, print materials, and product packaging. Manual color matching by eye is imprecise and time-consuming. Our color extraction tool analyzes every pixel of your uploaded image and identifies the most prominent colors, presenting them as easy-to-copy color swatches with their corresponding HEX codes.</p>
+      <h3>How to Use Extracted Colors for Your Brand</h3>
+      <p>Once you have extracted the HEX and RGB codes from your logo or brand image, you can use them across all your digital and print assets. Use the dominant color as your primary brand color for headers, buttons, and links on your website. Use secondary colors for backgrounds, borders, and accents. Use accent colors sparingly for calls-to-action, highlights, and important elements. Tools like Adobe Color, Coolors, and our color converter tool can help you build complete color harmonies from your extracted base colors.</p>
+      <h3>How Our Image Color Picker Works</h3>
+      <p>Our tool uses the HTML5 Canvas API to read pixel data from your uploaded image. When you upload an image, it is drawn onto a hidden canvas element, and the tool scans the pixel data to identify the most frequently occurring colors. The dominant colors are then displayed as clickable swatches with their exact HEX codes. Click any swatch to copy the color code to your clipboard. All processing happens locally in your browser — your images are never uploaded to any server.</p>
+    </div>
+    <div class="internal-links">
+      <h4>Explore More Free Tools</h4>
+      <a href="/tools/">All Tools</a> <a href="/tools/webp-to-jpg/">WebP to JPG Converter</a> <a href="/tools/favicon-generator/">Favicon Generator</a> <a href="/tools/svg-optimizer/">SVG Optimizer</a> <a href="/blog/">Read Our Blog</a> <a href="/contact.html">Contact Us</a>
+    </div>
+  </div></section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div><h4>Services</h4><ul class="footer-links"><li><a href="/services.html">Web Development</a></li><li><a href="/services.html">Ecommerce Development</a></li><li><a href="/services.html">Custom Software</a></li><li><a href="/services.html">Digital Marketing</a></li><li><a href="/services.html">AI Solutions</a></li></ul></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+  <script>
+    var drop = document.getElementById('dropZone');
+    var inp = document.getElementById('fileInput');
+    drop.addEventListener('click', function(){ inp.click(); });
+    drop.addEventListener('dragover', function(e){ e.preventDefault(); this.classList.add('dragover'); });
+    drop.addEventListener('dragleave', function(){ this.classList.remove('dragover'); });
+    drop.addEventListener('drop', function(e){ e.preventDefault(); this.classList.remove('dragover'); if(e.dataTransfer.files.length) process(e.dataTransfer.files[0]); });
+    inp.addEventListener('change', function(){ if(this.files.length) process(this.files[0]); });
+
+    function process(file) {
+      if (!file.type.match(/image\//)) { alert('Please select an image file.'); return; }
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var img = new Image();
+        img.onload = function() {
+          var canvas = document.createElement('canvas');
+          var size = 200;
+          canvas.width = size; canvas.height = size * (img.height / img.width);
+          var ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          var pixels = imageData.data;
+          var colorMap = {};
+          var step = 10;
+          for (var i = 0; i < pixels.length; i += 4 * step) {
+            var r = Math.round(pixels[i] / 16) * 16;
+            var g = Math.round(pixels[i+1] / 16) * 16;
+            var b = Math.round(pixels[i+2] / 16) * 16;
+            var key = r+','+g+','+b;
+            colorMap[key] = (colorMap[key]||0) + 1;
+          }
+          var sorted = Object.keys(colorMap).sort(function(a,b){ return colorMap[b] - colorMap[a]; });
+          var topColors = sorted.slice(0, 12);
+          var swatchContainer = document.getElementById('colorSwatches');
+          swatchContainer.innerHTML = '';
+          topColors.forEach(function(key) {
+            var parts = key.split(',');
+            var r = parseInt(parts[0]), g = parseInt(parts[1]), b = parseInt(parts[2]);
+            var hex = '#' + [r,g,b].map(function(c){ var h=c.toString(16); return h.length===1?'0'+h:h; }).join('');
+            var swatch = document.createElement('div');
+            swatch.className = 'color-swatch';
+            swatch.innerHTML = '<div class="swatch-box" style="background:'+hex+';" title="Click to copy '+hex+'" onclick="copyColor(\''+hex+'\',this)"></div><div class="swatch-hex">'+hex+'</div>';
+            swatchContainer.appendChild(swatch);
+          });
+          document.getElementById('previewImage').src = e.target.result;
+          document.getElementById('colorResults').style.display = 'block';
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function copyColor(hex, el) {
+      navigator.clipboard.writeText(hex).then(function(){
+        var orig = el.style.background;
+        el.style.background = 'var(--success)';
+        setTimeout(function(){ el.style.background = orig; }, 500);
+      });
+    }
+  </script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
