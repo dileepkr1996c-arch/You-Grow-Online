@@ -17,8 +17,8 @@
       { "title": "Image Compressor", "desc": "Reduce JPEG, PNG, and WebP file sizes by up to 80% without losing visual quality.", "icon_class": "fas fa-compress-arrows-alt", "link": "/tools/image-compressor/" },
       { "title": "Color Picker", "desc": "Upload any image and extract exact HEX and RGB brand color codes instantly.", "icon_class": "fas fa-palette", "link": "/tools/color-picker/" },
       { "title": "Favicon Generator", "desc": "Convert square images into production-ready .ico favicon files for your site.", "icon_class": "fas fa-globe", "link": "/tools/favicon-generator/" },
-      { "title": "Blog Image Processor", "desc": "Upload an image, enter your blog title, and auto-convert to WebP with the correct filename.", "icon_class": "fas fa-camera", "link": "/tools/blog-image-processor/" }
       { "title": "SVG Optimizer", "desc": "Minify raw SVG vector code by stripping metadata, comments, and whitespace.", "icon_class": "fas fa-bolt", "link": "/tools/svg-optimizer/" },
+      { "title": "Blog Image Processor", "desc": "Upload an image, enter your blog title, and auto-convert to WebP with the correct filename.", "icon_class": "fas fa-camera", "link": "/tools/blog-image-processor/" },
       { "title": "JPG to PNG", "desc": "Convert JPEG images to transparent-background PNG format for design assets.", "icon_class": "fas fa-file-image", "link": "#" },
       { "title": "Image Resizer", "desc": "Resize images to custom width and height dimensions for any platform.", "icon_class": "fas fa-expand-arrows-alt", "link": "#" },
       { "title": "Crop Tool", "desc": "Crop images to precise custom aspect ratios and dimensions.", "icon_class": "fas fa-crop-alt", "link": "#" },
@@ -37,7 +37,7 @@
       { "title": "Round Corners", "desc": "Apply rounded corner effects to images for button and avatar styling.", "icon_class": "fas fa-circle-notch", "link": "#" },
       { "title": "TIFF to JPG", "desc": "Convert print-grade TIFF files into web-friendly JPG format.", "icon_class": "fas fa-file-export", "link": "#" },
       { "title": "BMP Converter", "desc": "Convert raw BMP bitmap files into modern JPG or PNG web formats.", "icon_class": "fas fa-vector-square", "link": "#" },
-      { "title": "Image Text Read", "desc": "OCR reader that extracts text characters from images using canvas analysis.", "icon_class": "fas fa-eye", "link": "#" },
+      { "title": "Image Text Read", "desc": "OCR reader that extracts text characters from images using canvas analysis.", "icon_class": "fas fa-eye", "link": "#" }
     ],
     "seo-tools": [
       { "title": "Meta Tag Generator", "desc": "Generate SEO-optimized HTML meta tags for title, description, and keywords.", "icon_class": "fas fa-tags", "link": "/tools/meta-tag-generator/" },
