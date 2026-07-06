@@ -226,7 +226,17 @@
 
 /* ==========================================
    GOOGLE ADSENSE — Ad Slot Placeholders
+   ==========================================
+   Available slot sizes for Google AdSense:
+   - Top / Bottom  → 728 × 90  (Leaderboard)
+   - Left / Right  → 160 × 600 (Skyscraper)
    ========================================== */
+.page-ad-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .ad-slot-top {
   margin: 0 auto 24px;
   max-width: 728px;
@@ -255,18 +265,11 @@
   font-size: 0.8rem;
 }
 
-/* Side Ad Wrapper */
-.page-ad-wrapper {
-  position: relative;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.ad-side-left,
-.ad-side-right {
-  position: absolute;
-  top: 0;
+/* Side ads — fixed to viewport, no overflow impact */
+.ad-side-left {
+  position: fixed;
+  top: 120px;
+  left: calc(50% - 660px);
   width: 160px;
   min-height: 600px;
   background: var(--bg-secondary);
@@ -279,14 +282,26 @@
   font-size: 0.75rem;
   writing-mode: vertical-lr;
   text-orientation: mixed;
-}
-
-.ad-side-left {
-  left: -190px;
+  z-index: 5;
 }
 
 .ad-side-right {
-  right: -190px;
+  position: fixed;
+  top: 120px;
+  right: calc(50% - 660px);
+  width: 160px;
+  min-height: 600px;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  z-index: 5;
 }
 
 /* ==========================================
@@ -574,8 +589,8 @@
    RESPONSIVE — Strict 4-col / 3-col grid
    ========================================== */
 
-/* Hide side ads below 1280px */
-@media (max-width: 1280px) {
+/* Hide side ads below 1500px (they'd overlap content) */
+@media (max-width: 1500px) {
   .ad-side-left,
   .ad-side-right { display: none !important; }
 }
