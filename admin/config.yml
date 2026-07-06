@@ -17,7 +17,10 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Robots Settings", name: "robots", widget: "hidden", default: "index, follow" }
       - { label: "Blog Title (H1)", name: "title", widget: "string" }
+      - { label: "Suggested Blog URL (Slug)", name: "slug", widget: "string", required: false, hint: "E.g., my-awesome-blog-post" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Category", name: "category", widget: "select", options: ["Marketing", "Web Design", "SEO", "Business", "General"], required: false }
+      - { label: "SEO Keywords / Tags", name: "tags", widget: "list", required: false, hint: "Comma separated values ya list" }
       - { label: "Featured Image (Thumbnail)", name: "image", widget: "image" }
       - { label: "Short Description (Meta Description)", name: "description", widget: "text" }
       - { label: "Blog Body Content", name: "body", widget: "markdown" }
