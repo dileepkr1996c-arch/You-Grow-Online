@@ -113,7 +113,7 @@ Your website is built specifically for your brand instead of looking like thousa
 
 <p>These recurring costs can significantly increase monthly expenses.</p>
 
-<p>With <strong>You Grow Online</strong>, businesses receive a <strong>fully functional e-commerce solution</strong> from the beginning, helping reduce ongoing costs while providing professional functionality.</p>
+<p>With <strong>[You Grow Online](https://yougrowonline.in/contact.html)</strong>, businesses receive a <strong>fully functional e-commerce solution</strong> from the beginning, helping reduce ongoing costs while providing professional functionality.</p>
 
 <h2>Who Should Choose Shopify?</h2>
 
