@@ -71,14 +71,36 @@
         <div class="svg-stat"><div class="val" id="svgSavings">-</div><div class="lbl">Savings</div></div>
       </div>
       <button class="btn btn-primary" onclick="copySVG()" style="margin-top:12px;"><i class="fa-regular fa-copy"></i> Copy Optimized Code</button>
-      <div class="lead-capture" style="margin-top:24px;">
-        <h3>Want to scale your business online?</h3>
-        <p>Get a free professional consultation from You-Grow-Online experts. We build high-performance websites with optimized code and assets.</p>
-        <form action="/contact.html" method="GET">
-          <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required></div>
-          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
-        </form>
-      </div>
+                  <div class="tool-contact-form">
+              <h3>Get a Free Consultation</h3>
+              <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+              <form class="contact-form-form" data-source="Tool">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your Full Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Your Email Address *" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                  <select name="service" required>
+                    <option value="">Service Interested In *</option>
+                    <option value="website">Website Development</option>
+                    <option value="ecommerce">Ecommerce Development</option>
+                    <option value="software">Custom Software</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="ai">AI Solutions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
     </div>
     <div class="guide-content">
       <h2>Why Optimize SVG Code? A Complete Guide to SVG Optimization for Website Performance</h2>
@@ -88,7 +110,16 @@
       <p>Our free SVG optimizer uses smart regex patterns to clean up your SVG code without affecting the visual rendering. It removes XML comments and doctype declarations. It strips editor-specific metadata from Illustrator, Sketch, Figma, and Inkscape. It eliminates default attributes that SVG renderers already assume. It removes empty groups, redundant namespace declarations, and unnecessary whitespace. The resulting code is compact, clean, and renders identically to the original.</p>
       <h3>How to Use Optimized SVGs on Your Website</h3>
       <p>Once you have optimized your SVG code, you can paste it directly into your HTML as inline SVG, or save it as a .svg file and use it in an <code>&lt;img&gt;</code> tag, CSS background-image, or embed it in your JavaScript framework component. Inline SVGs are generally preferred for icons and UI elements because they can be styled with CSS and animated with JavaScript. For logos and complex illustrations, using an optimized .svg file in an <code>&lt;img&gt;</code> tag is more practical and cacheable.</p>
-    </div>
+                <aside class="sidebar">
+              <div class="sidebar-section">
+                <h4>Popular Tools</h4>
+                <ul id="sidebarTools"><li>Loading...</li></ul>
+              </div>
+              <div class="sidebar-section">
+                <h4>Latest Blog Posts</h4>
+                <ul id="sidebarPosts"><li>Loading...</li></ul>
+              </div>
+            </aside></div>
     <div class="internal-links">
       <h4>Explore More Free Tools</h4>
       <a href="/tools/">All Tools</a> <a href="/tools/webp-to-jpg/">WebP to JPG Converter</a> <a href="/tools/color-picker/">Image Color Picker</a> <a href="/tools/favicon-generator/">Favicon Generator</a> <a href="/blog/">Read Our Blog</a> <a href="/contact.html">Contact Us</a>
@@ -114,7 +145,7 @@
         <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div></div>
     </div>
   </footer>
   <script>
@@ -186,5 +217,6 @@
     }
   </script>
   <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
 </body>
 </html>

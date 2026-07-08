@@ -17,7 +17,7 @@
             });
           });
           var shuffled = allTools.sort(function() { return 0.5 - Math.random(); });
-          var picked = shuffled.slice(0, 4);
+          var picked = shuffled.slice(0, 10);
           var html = '';
           picked.forEach(function(t) {
             html += '<li><a href="' + t.link + '">' + t.title + '</a></li>';
@@ -35,10 +35,17 @@
         { title: 'SEO Trends 2026: What You Need to Know', url: '/blog/' },
         { title: 'Web Development vs No-Code: Which Is Right?', url: '/blog/' },
         { title: 'Google Ads for Small Business: A Complete Guide', url: '/blog/' },
-        { title: 'Digital Marketing ROI: The Ultimate Guide', url: '/blog/' }
+        { title: 'Digital Marketing ROI: The Ultimate Guide', url: '/blog/' },
+        { title: 'Top 10 Web Design Trends for 2026', url: '/blog/' },
+        { title: 'How to Build a Brand Identity from Scratch', url: '/blog/' },
+        { title: 'Facebook Ads vs Google Ads: Which is Better?', url: '/blog/' },
+        { title: 'Complete Guide to Website Accessibility', url: '/blog/' },
+        { title: 'Ecommerce SEO: Drive More Traffic to Your Store', url: '/blog/' },
+        { title: 'AI-Powered Marketing: Tools and Strategies', url: '/blog/' },
+        { title: 'How to Choose the Right Web Development Partner', url: '/blog/' }
       ];
       var shuffled = posts.sort(function() { return 0.5 - Math.random(); });
-      var picked = shuffled.slice(0, 3);
+          var picked = shuffled.slice(0, 10);
       var html = '';
       picked.forEach(function(p) {
         html += '<li><a href="' + p.url + '">' + p.title + '</a></li>';

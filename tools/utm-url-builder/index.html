@@ -128,17 +128,36 @@
       </div>
 
       <!-- Lead Capture -->
-      <div class="lead-capture">
-        <h3>Want to grow your business online?</h3>
-        <p>Get a free consultation from our digital marketing experts. We will help you set up campaign tracking, optimize your ads, and maximize your ROI.</p>
-        <form action="/contact.html" method="GET">
-          <div class="form-row">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
-        </form>
-      </div>
+                  <div class="tool-contact-form">
+              <h3>Get a Free Consultation</h3>
+              <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+              <form class="contact-form-form" data-source="Tool">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your Full Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Your Email Address *" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                  <select name="service" required>
+                    <option value="">Service Interested In *</option>
+                    <option value="website">Website Development</option>
+                    <option value="ecommerce">Ecommerce Development</option>
+                    <option value="software">Custom Software</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="ai">AI Solutions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
 
       <!-- Internal Links -->
       <div class="internal-links">
@@ -205,8 +224,8 @@
       <div class="footer-bottom">
         <p>&copy; 2026 You Grow Online. All rights reserved.</p>
         <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <a href="/terms-of-service/">Terms of Service</a>
         </div>
       </div>
     </div>
@@ -254,5 +273,6 @@
     }
   </script>
   <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
 </body>
 </html>

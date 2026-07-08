@@ -71,14 +71,36 @@
           <p style="font-size:0.78rem;color:var(--text-muted);margin-top:8px;">The favicon will be saved as a .ico file containing multiple sizes</p>
         </div>
       </div>
-      <div class="lead-capture" style="margin-top:24px;">
-        <h3>Want to scale your business online?</h3>
-        <p>Get a free professional consultation from You-Grow-Online experts. We build complete website solutions from design to deployment.</p>
-        <form action="/contact.html" method="GET">
-          <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Your Email" required></div>
-          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
-        </form>
-      </div>
+                  <div class="tool-contact-form">
+              <h3>Get a Free Consultation</h3>
+              <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+              <form class="contact-form-form" data-source="Tool">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your Full Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Your Email Address *" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                  <select name="service" required>
+                    <option value="">Service Interested In *</option>
+                    <option value="website">Website Development</option>
+                    <option value="ecommerce">Ecommerce Development</option>
+                    <option value="software">Custom Software</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="ai">AI Solutions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+            </div>
     </div>
     <div class="guide-content">
       <h2>Why Your Website Needs a Favicon: The Complete Guide to Favicon SEO and Branding</h2>
@@ -88,7 +110,16 @@
       <p>The standard favicon size is 16x16 pixels, but modern browsers and devices support larger sizes for better display on high-resolution screens, bookmarks, and home screen shortcuts. A comprehensive favicon set should include sizes for 16x16, 32x32, 48x48, and 64x64 pixels. Our favicon generator automatically creates all these sizes from your uploaded image and packages them into a single .ico file. For best results, upload a square PNG image with a transparent background and high contrast colors that remain recognizable even at very small sizes.</p>
       <h3>How to Install Your Favicon</h3>
       <p>Once you have downloaded your favicon.ico file, upload it to the root directory of your website (or your assets folder). Then add the following line to the <code>&lt;head&gt;</code> section of your HTML: <code>&lt;link rel="icon" type="image/x-icon" href="/favicon.ico"&gt;</code>. Most modern CMS platforms like WordPress, Shopify, and Wix have built-in favicon upload options in their theme settings. Some browsers may cache the old favicon, so you may need to clear your browser cache or use a different browser to see the new icon.</p>
-    </div>
+                <aside class="sidebar">
+              <div class="sidebar-section">
+                <h4>Popular Tools</h4>
+                <ul id="sidebarTools"><li>Loading...</li></ul>
+              </div>
+              <div class="sidebar-section">
+                <h4>Latest Blog Posts</h4>
+                <ul id="sidebarPosts"><li>Loading...</li></ul>
+              </div>
+            </aside></div>
     <div class="internal-links">
       <h4>Explore More Free Tools</h4>
       <a href="/tools/">All Tools</a> <a href="/tools/webp-to-jpg/">WebP to JPG Converter</a> <a href="/tools/color-picker/">Image Color Picker</a> <a href="/tools/svg-optimizer/">SVG Optimizer</a> <a href="/blog/">Read Our Blog</a> <a href="/contact.html">Contact Us</a>
@@ -114,7 +145,7 @@
         <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="/blog/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div></div>
     </div>
   </footer>
   <script>
@@ -173,5 +204,6 @@
     }
   </script>
   <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
 </body>
 </html>

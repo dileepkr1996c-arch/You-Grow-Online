@@ -90,17 +90,45 @@
         <h3>How URL Slugs Affect User Experience</h3>
         <p>Beyond SEO, URL slugs play a significant role in user experience. A clear, readable URL tells users exactly what to expect when they click a link. It also makes your URLs more shareable on social media, in emails, and in messaging apps. When someone sees a clean, descriptive URL, they are more likely to trust and click on it. A messy URL with random characters and parameters looks suspicious and can reduce click-through rates. Clean URLs also make your site structure easier to navigate and manage, especially as your website grows with more pages and content.</p>
       </div>
-      <div class="lead-capture">
-        <h3>Want to grow your business online?</h3>
-        <p>Get a free consultation from our digital marketing experts. We will help you optimize your website structure, improve your SEO, and drive more traffic.</p>
-        <form action="/contact.html" method="GET">
-          <div class="form-row">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-          </div>
-          <button type="submit" class="btn btn-primary">Get Free Consultation</button>
-        </form>
-      </div>
+                  <div class="tool-contact-form">
+              <h3>Get a Free Consultation</h3>
+              <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+              <form class="contact-form-form" data-source="Tool">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Your Full Name *" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Your Email Address *" required>
+                </div>
+                <div class="form-group">
+                  <input type="tel" name="phone" placeholder="Your Phone Number">
+                </div>
+                <div class="form-group">
+                  <select name="service" required>
+                    <option value="">Service Interested In *</option>
+                    <option value="website">Website Development</option>
+                    <option value="ecommerce">Ecommerce Development</option>
+                    <option value="software">Custom Software</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="ai">AI Solutions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+                        <aside class="sidebar">
+              <div class="sidebar-section">
+                <h4>Popular Tools</h4>
+                <ul id="sidebarTools"><li>Loading...</li></ul>
+              </div>
+              <div class="sidebar-section">
+                <h4>Latest Blog Posts</h4>
+                <ul id="sidebarPosts"><li>Loading...</li></ul>
+              </div>
+            </aside></div>
       <div class="internal-links">
         <h4>Explore More Free Tools</h4>
         <a href="/tools/">All Tools</a>
@@ -163,7 +191,7 @@
       </div>
       <div class="footer-bottom">
         <p>&copy; 2026 You Grow Online. All rights reserved.</p>
-        <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        <div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div>
       </div>
     </div>
   </footer>
@@ -198,5 +226,6 @@
     }
   </script>
   <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
 </body>
 </html>
