@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ----- Day/Night Theme Toggle ----- */
   const themeToggle = document.querySelector('.theme-toggle');
-  const storedTheme = localStorage.getItem('ygo_theme') || 'dark';
+  const storedTheme = localStorage.getItem('ygo_theme') || 'light';
 
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
@@ -49,24 +49,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ----- Mobile Hamburger Menu ----- */
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
+  var hamburger = document.querySelector('.hamburger');
+  var navMenu = document.querySelector('.nav-menu');
+
+  function closeMobileMenu() {
+    if (hamburger) hamburger.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function toggleMobileMenu() {
+    if (!hamburger || !navMenu) return;
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('open');
+    document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+  }
 
   if (hamburger) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('open');
-      document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
-    });
+    hamburger.addEventListener('click', toggleMobileMenu);
   }
 
   /* Close menu on link click */
-  document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  document.querySelectorAll('.nav-link, .nav-cta, .sub-nav-item a').forEach(function(link) {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  /* Close menu on Escape key */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMobileMenu();
   });
 
   /* ----- Active Nav Link on Scroll ----- */

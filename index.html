@@ -62,7 +62,7 @@
         <a href="/services.html" class="nav-link">Services</a>
         <a href="/portfolio.html" class="nav-link">Portfolio</a>
         <a href="/#pricing" class="nav-link">Pricing</a>
-        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="https://blog.yougrowonline.in/" class="nav-link">Blog</a>
         <a href="/about.html" class="nav-link">About</a>
         <a href="/contact.html" class="nav-link">Contact</a>
         <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
@@ -520,52 +520,11 @@
         <h2 class="section-title">Latest Insights &amp; News</h2>
         <p class="section-subtitle">Stay updated with trends in web development, digital marketing, and AI.</p>
       </div>
-      <div class="blog-grid">
-        <article class="blog-card fade-in-up stagger-1">
-          <div class="blog-card-image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="Digital marketing analytics on laptop screen">
-            <span class="blog-date-badge">Jun 15, 2026</span>
-          </div>
-          <div class="blog-card-body">
-            <h3>Top Web Design Trends for 2026</h3>
-            <p>Discover the latest web design trends shaping the digital landscape and how to leverage them for your business.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date"><i class="fa-regular fa-calendar"></i> Jun 15, 2026</span>
-              <a href="/blog/top-web-design-trends-2026/" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
-        <article class="blog-card fade-in-up stagger-2">
-          <div class="blog-card-image">
-            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="Artificial intelligence and machine learning concept">
-            <span class="blog-date-badge">Jun 10, 2026</span>
-          </div>
-          <div class="blog-card-body">
-            <h3>How AI is Transforming Digital Marketing</h3>
-            <p>Explore how AI is revolutionizing digital marketing and helping businesses achieve better results.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date"><i class="fa-regular fa-calendar"></i> Jun 10, 2026</span>
-              <a href="/blog/ai-transforming-digital-marketing/" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
-        <article class="blog-card fade-in-up stagger-3">
-          <div class="blog-card-image">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&q=80" alt="Ecommerce shopping on mobile device">
-            <span class="blog-date-badge">Jun 5, 2026</span>
-          </div>
-          <div class="blog-card-body">
-            <h3>Ecommerce SEO: A Complete Guide</h3>
-            <p>Learn essential SEO strategies to boost your ecommerce store's visibility and drive more organic traffic.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date"><i class="fa-regular fa-calendar"></i> Jun 5, 2026</span>
-              <a href="/blog/ecommerce-seo-complete-guide/" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </article>
+      <div class="blog-grid" id="blog-posts">
+        <div style="grid-column:1/-1;text-align:center;padding:40px 0;">Loading latest posts...</div>
       </div>
       <div style="text-align:center; margin-top:36px;">
-        <a href="/blog/" class="btn btn-secondary">View All Posts <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="https://blog.yougrowonline.in/" class="btn btn-secondary">View All Posts <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -679,7 +638,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about.html">About Us</a></li>
             <li><a href="/portfolio.html">Portfolio</a></li>
-            <li><a href="/blog/">Blog</a></li>
+            <li><a href="https://blog.yougrowonline.in/">Blog</a></li>
             <li><a href="/tools/">Free Tools</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
@@ -704,5 +663,43 @@
   </footer>
 
   <script src="/assets/js/main.js"></script>
+  <script>
+    (function() {
+      var container = document.getElementById('blog-posts');
+      if (!container) return;
+      fetch('/assets/data/blog-posts.json')
+        .then(function(r) { return r.json(); })
+        .then(function(posts) {
+          container.innerHTML = '';
+          posts.forEach(function(post, i) {
+            var article = document.createElement('article');
+            article.className = 'blog-card fade-in-up stagger-' + (i + 1);
+            article.innerHTML =
+              '<div class="blog-card-image">' +
+                '<img src="' + post.image + '" alt="' + post.title.replace(/"/g,'&quot;') + '" loading="lazy">' +
+                '<span class="blog-date-badge">' + post.date + '</span>' +
+              '</div>' +
+              '<div class="blog-card-body">' +
+                '<h3>' + post.title + '</h3>' +
+                '<p>' + post.description + '</p>' +
+                '<div class="blog-card-footer">' +
+                  '<span class="blog-date"><i class="fa-regular fa-calendar"></i> ' + post.date + '</span>' +
+                  '<a href="' + post.url + '" class="blog-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>' +
+                '</div>' +
+              '</div>';
+            container.appendChild(article);
+          });
+          setTimeout(function() {
+            document.querySelectorAll('#blog-posts .fade-in-up').forEach(function(el) {
+              el.style.opacity = '1';
+              el.style.transform = 'translateY(0)';
+            });
+          }, 100);
+        })
+        .catch(function() {
+          container.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px 0;">Unable to load posts. <a href="https://blog.yougrowonline.in/" style="color:#3b82f6;">Visit our blog &rarr;</a></div>';
+        });
+    })();
+  </script>
 </body>
 </html>
