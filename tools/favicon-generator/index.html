@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Favicon Generator — Create .ico Files Online | You Grow Online</title>
+  <meta name="description" content="Convert PNG/JPG images into perfectly sized .ico favicon files for your website. Free online favicon generator for better SEO and branding.">
+  <meta name="keywords" content="favicon generator, ico converter, favicon creator, website icon generator, favicon from png, free seo tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/favicon-generator/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Favicon Generator — Create Website Icons">
+  <meta property="og:description" content="Convert any image into a perfectly sized .ico favicon file. Free online tool for better website branding and SEO.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/favicon-generator/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Favicon Generator">
+  <meta name="twitter:description" content="Create favicon .ico files from any image instantly.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+  <style>
+    .favicon-sizes { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; justify-content: center; }
+    .favicon-size-box { text-align: center; }
+    .favicon-size-box canvas { border: 1px solid var(--border-color); border-radius: 4px; }
+    .favicon-size-box .size-label { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a> <a href="/services.html" class="nav-link">Services</a> <a href="/portfolio.html" class="nav-link">Portfolio</a> <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="https://blog.yougrowonline.in/" class="nav-link">Blog</a> <a href="/about.html" class="nav-link">About</a> <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+<!-- Sub-Navigation Bar -->
+<div class="sub-nav-bar">
+  <ul class="sub-nav-links">
+    <li class="sub-nav-item"><a href="/tools/">Free Tools</a></li>
+    <li class="sub-nav-item"><a href="#">Web Solutions</a></li>
+    <li class="sub-nav-item"><a href="#">Mobile Apps</a></li>
+  </ul>
+</div>
+<section class="page-header"><div class="container"><h1>Free Favicon Generator</h1><p>Convert any PNG or JPG image into a perfectly sized favicon.ico file for your website. Improves branding, SEO, and user trust.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="tool-interface">
+      <div class="drop-zone" id="dropZone">
+        <i class="fa-solid fa-globe"></i>
+        <p>Upload an image to convert into a favicon</p>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">PNG or JPG recommended. Will be resized to standard favicon sizes.</p>
+        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+        <button class="btn btn-primary">Choose Image</button>
+      </div>
+      <div id="faviconResults" style="display:none;margin-top:20px;">
+        <div class="favicon-sizes" id="faviconSizes"></div>
+        <div style="text-align:center;margin-top:20px;">
+          <button class="btn btn-primary" id="downloadIcoBtn"><i class="fa-solid fa-download"></i> Download Favicon (.ico)</button>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:8px;">The favicon will be saved as a .ico file containing multiple sizes</p>
+        </div>
+      </div>
+                              <div class="tool-contact-form">
+              <div class="tool-contact-form-inner">
+                <div class="tool-contact-form-info">
+                  <h3>Get a Free Consultation</h3>
+                  <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+                  <div class="contact-info-item"><i class="fa-solid fa-envelope"></i> contact.yougrowonline@gmail.com</div>
+                  <div class="contact-info-item"><i class="fa-solid fa-phone"></i> +91 89718 35181</div>
+                </div>
+                <form class="contact-form-form tool-contact-form-fields" data-source="Tool">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Full Name *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                  </div>
+                  <div class="form-group">
+                    <select name="service" required>
+                      <option value="">Service Interested In *</option>
+                      <option value="website">Website Development</option>
+                      <option value="ecommerce">Ecommerce Development</option>
+                      <option value="software">Custom Software</option>
+                      <option value="marketing">Digital Marketing</option>
+                      <option value="ai">AI Solutions</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div></div>
+    <div class="guide-content">
+      <h2>Why Your Website Needs a Favicon: The Complete Guide to Favicon SEO and Branding</h2>
+      <p>A favicon (short for "favorite icon") is a small 16x16 to 64x64 pixel icon that appears in browser tabs, bookmarks, history, address bars, and search engine results. Despite its tiny size, a favicon plays a significant role in your website's professional appearance, user trust, and even SEO. Websites with a favicon appear more credible and established to visitors, which can increase click-through rates from search results and improve user engagement once they land on your site.</p>
+      <p>From an SEO perspective, while a favicon is not a direct ranking factor, it contributes to several metrics that Google considers important. A recognizable favicon helps users identify your website among multiple open tabs and bookmarks, encouraging repeat visits. In Google search results on mobile devices, your favicon appears next to your site name in the augmented search results, making your listing stand out from competitors who have not added a favicon. This visual differentiation can significantly improve your organic click-through rate.</p>
+      <h3>Favicon Best Practices</h3>
+      <p>The standard favicon size is 16x16 pixels, but modern browsers and devices support larger sizes for better display on high-resolution screens, bookmarks, and home screen shortcuts. A comprehensive favicon set should include sizes for 16x16, 32x32, 48x48, and 64x64 pixels. Our favicon generator automatically creates all these sizes from your uploaded image and packages them into a single .ico file. For best results, upload a square PNG image with a transparent background and high contrast colors that remain recognizable even at very small sizes.</p>
+      <h3>How to Install Your Favicon</h3>
+      <p>Once you have downloaded your favicon.ico file, upload it to the root directory of your website (or your assets folder). Then add the following line to the <code>&lt;head&gt;</code> section of your HTML: <code>&lt;link rel="icon" type="image/x-icon" href="/favicon.ico"&gt;</code>. Most modern CMS platforms like WordPress, Shopify, and Wix have built-in favicon upload options in their theme settings. Some browsers may cache the old favicon, so you may need to clear your browser cache or use a different browser to see the new icon.</p>
+                <aside class="sidebar">
+              <div class="sidebar-section">
+                <h4>Popular Tools</h4>
+                <ul id="sidebarTools"><li>Loading...</li></ul>
+              </div>
+              <div class="sidebar-section">
+                <h4>Latest Blog Posts</h4>
+                <ul id="sidebarPosts"><li>Loading...</li></ul>
+              </div>
+            </aside></div>
+    <div class="internal-links">
+      <h4>Explore More Free Tools</h4>
+      <a href="/tools/">All Tools</a> <a href="/tools/webp-to-jpg/">WebP to JPG Converter</a> <a href="/tools/color-picker/">Image Color Picker</a> <a href="/tools/svg-optimizer/">SVG Optimizer</a> <a href="https://blog.yougrowonline.in/">Read Our Blog</a> <a href="/contact.html">Contact Us</a>
+    </div>
+  </div></section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div><h4>Services</h4><ul class="footer-links"><li><a href="/services.html">Web Development</a></li><li><a href="/services.html">Ecommerce Development</a></li><li><a href="/services.html">Custom Software</a></li><li><a href="/services.html">Digital Marketing</a></li><li><a href="/services.html">AI Solutions</a></li></ul></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="https://blog.yougrowonline.in/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div></div>
+    </div>
+  </footer>
+  <script>
+    var currentImgData = null;
+    var drop = document.getElementById('dropZone');
+    var inp = document.getElementById('fileInput');
+    drop.addEventListener('click', function(){ inp.click(); });
+    drop.addEventListener('dragover', function(e){ e.preventDefault(); this.classList.add('dragover'); });
+    drop.addEventListener('dragleave', function(){ this.classList.remove('dragover'); });
+    drop.addEventListener('drop', function(e){ e.preventDefault(); this.classList.remove('dragover'); if(e.dataTransfer.files.length) processFavicon(e.dataTransfer.files[0]); });
+    inp.addEventListener('change', function(){ if(this.files.length) processFavicon(this.files[0]); });
+
+    function processFavicon(file) {
+      if (!file.type.match(/image\//)) { alert('Please select an image file.'); return; }
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        currentImgData = e.target.result;
+        var img = new Image();
+        img.onload = function() {
+          var sizes = [16, 32, 48, 64];
+          var container = document.getElementById('faviconSizes');
+          container.innerHTML = '';
+          var canvases = [];
+          sizes.forEach(function(size) {
+            var canvas = document.createElement('canvas');
+            canvas.width = size; canvas.height = size;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, size, size);
+            canvases.push(canvas);
+            var box = document.createElement('div');
+            box.className = 'favicon-size-box';
+            var c = document.createElement('canvas');
+            c.width = size; c.height = size;
+            var cx = c.getContext('2d');
+            cx.drawImage(img, 0, 0, size, size);
+            box.appendChild(c);
+            box.innerHTML += '<div class="size-label">'+size+'x'+size+'</div>';
+            container.appendChild(box);
+          });
+          document.getElementById('faviconResults').style.display = 'block';
+          var dlBtn = document.getElementById('downloadIcoBtn');
+          dlBtn.onclick = function() {
+            var icoCanvas = document.createElement('canvas');
+            icoCanvas.width = 64; icoCanvas.height = 64;
+            var icoCtx = icoCanvas.getContext('2d');
+            icoCtx.drawImage(img, 0, 0, 64, 64);
+            var link = document.createElement('a');
+            link.download = 'favicon.ico';
+            link.href = icoCanvas.toDataURL('image/x-icon').replace('image/x-icon', 'image/png');
+            link.click();
+          };
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  </script>
+  <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free SVG Optimizer — Minify Clean SVG Code Online | You Grow Online</title>
+  <meta name="description" content="Compress and clean up raw SVG code to reduce file size by up to 60%. Remove comments, metadata, and unnecessary attributes. Free online SVG optimizer for faster websites.">
+  <meta name="keywords" content="svg optimizer, svg minifier, svg compressor, clean svg code, svg size reducer, svg cleaner, free developer tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/svg-optimizer/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free SVG Optimizer — Minify and Clean SVG Code">
+  <meta property="og:description" content="Compress SVG code by removing unnecessary data. Clean, minify, and optimize SVG vectors for faster website loading.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/svg-optimizer/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free SVG Optimizer Online">
+  <meta name="twitter:description" content="Clean and minify SVG code for faster website performance.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+  <style>
+    .svg-stats { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
+    .svg-stat { padding: 12px 20px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); text-align: center; flex: 1; min-width: 120px; }
+    .svg-stat .val { font-size: 1.3rem; font-weight: 800; color: var(--accent-primary); }
+    .svg-stat .lbl { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+  </style>
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a> <a href="/services.html" class="nav-link">Services</a> <a href="/portfolio.html" class="nav-link">Portfolio</a> <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="https://blog.yougrowonline.in/" class="nav-link">Blog</a> <a href="/about.html" class="nav-link">About</a> <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+<!-- Sub-Navigation Bar -->
+<div class="sub-nav-bar">
+  <ul class="sub-nav-links">
+    <li class="sub-nav-item"><a href="/tools/">Free Tools</a></li>
+    <li class="sub-nav-item"><a href="#">Web Solutions</a></li>
+    <li class="sub-nav-item"><a href="#">Mobile Apps</a></li>
+  </ul>
+</div>
+<section class="page-header"><div class="container"><h1>Free SVG Optimizer</h1><p>Compress and clean up raw SVG vector code to dramatically boost your website loading speed. Remove comments, metadata, editor cruft, and unnecessary attributes.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="tool-interface">
+      <div class="form-group"><label for="svgInput">Paste your raw SVG code here</label><textarea id="svgInput" placeholder='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">...' rows="10" style="font-family:Consolas,Monaco,monospace;font-size:0.82rem;"></textarea></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+        <button class="btn btn-primary" onclick="optimizeSVG()"><i class="fa-solid fa-bolt"></i> Optimize SVG</button>
+        <button class="btn btn-secondary" onclick="document.getElementById('svgInput').value='';document.getElementById('svgOutput').value='';document.getElementById('svgStats').style.display='none';"><i class="fa-solid fa-eraser"></i> Clear</button>
+        <input type="file" id="svgFileInput" accept=".svg" style="display:none;" onchange="loadSVGFile(this)">
+        <button class="btn btn-secondary" onclick="document.getElementById('svgFileInput').click()"><i class="fa-solid fa-upload"></i> Upload .svg File</button>
+      </div>
+      <div class="form-group"><label>Optimized SVG Code</label><textarea id="svgOutput" rows="10" readonly style="background:var(--bg-secondary);font-family:Consolas,Monaco,monospace;font-size:0.82rem;color:var(--accent-secondary);"></textarea></div>
+      <div class="svg-stats" id="svgStats" style="display:none;">
+        <div class="svg-stat"><div class="val" id="origSvgSize">-</div><div class="lbl">Original Size</div></div>
+        <div class="svg-stat"><div class="val" id="optSvgSize">-</div><div class="lbl">Optimized Size</div></div>
+        <div class="svg-stat"><div class="val" id="svgSavings">-</div><div class="lbl">Savings</div></div>
+      </div>
+      <button class="btn btn-primary" onclick="copySVG()" style="margin-top:12px;"><i class="fa-regular fa-copy"></i> Copy Optimized Code</button>
+                              <div class="tool-contact-form">
+              <div class="tool-contact-form-inner">
+                <div class="tool-contact-form-info">
+                  <h3>Get a Free Consultation</h3>
+                  <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+                  <div class="contact-info-item"><i class="fa-solid fa-envelope"></i> contact.yougrowonline@gmail.com</div>
+                  <div class="contact-info-item"><i class="fa-solid fa-phone"></i> +91 89718 35181</div>
+                </div>
+                <form class="contact-form-form tool-contact-form-fields" data-source="Tool">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Full Name *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                  </div>
+                  <div class="form-group">
+                    <select name="service" required>
+                      <option value="">Service Interested In *</option>
+                      <option value="website">Website Development</option>
+                      <option value="ecommerce">Ecommerce Development</option>
+                      <option value="software">Custom Software</option>
+                      <option value="marketing">Digital Marketing</option>
+                      <option value="ai">AI Solutions</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div></div>
+    <div class="guide-content">
+      <h2>Why Optimize SVG Code? A Complete Guide to SVG Optimization for Website Performance</h2>
+      <p>SVG (Scalable Vector Graphics) is an XML-based vector image format that is widely used for icons, logos, illustrations, and user interface elements on the web. Unlike raster formats like JPG and PNG, SVGs are resolution-independent and can scale to any size without losing quality. However, SVG files exported from design tools like Adobe Illustrator, Sketch, Figma, and Inkscape often contain??? unnecessary data — editor metadata, comments, hidden layers, default attributes, and redundant grouping elements. This bloated code can increase file size by 200-500% compared to a clean, optimized version.</p>
+      <p>Optimizing SVG code is one of the easiest wins for website performance optimization. A single complex SVG icon set that was 100KB can be reduced to 25-30KB after optimization. When you have dozens of SVGs on your website — for icons, logos, illustrations, and UI elements — the cumulative savings can be significant. Smaller SVG files mean faster downloads, less bandwidth usage, and better Core Web Vitals scores, particularly the Largest Contentful Paint (LCP) metric that Google uses for ranking.</p>
+      <h3>What Our SVG Optimizer Removes</h3>
+      <p>Our free SVG optimizer uses smart regex patterns to clean up your SVG code without affecting the visual rendering. It removes XML comments and doctype declarations. It strips editor-specific metadata from Illustrator, Sketch, Figma, and Inkscape. It eliminates default attributes that SVG renderers already assume. It removes empty groups, redundant namespace declarations, and unnecessary whitespace. The resulting code is compact, clean, and renders identically to the original.</p>
+      <h3>How to Use Optimized SVGs on Your Website</h3>
+      <p>Once you have optimized your SVG code, you can paste it directly into your HTML as inline SVG, or save it as a .svg file and use it in an <code>&lt;img&gt;</code> tag, CSS background-image, or embed it in your JavaScript framework component. Inline SVGs are generally preferred for icons and UI elements because they can be styled with CSS and animated with JavaScript. For logos and complex illustrations, using an optimized .svg file in an <code>&lt;img&gt;</code> tag is more practical and cacheable.</p>
+                <aside class="sidebar">
+              <div class="sidebar-section">
+                <h4>Popular Tools</h4>
+                <ul id="sidebarTools"><li>Loading...</li></ul>
+              </div>
+              <div class="sidebar-section">
+                <h4>Latest Blog Posts</h4>
+                <ul id="sidebarPosts"><li>Loading...</li></ul>
+              </div>
+            </aside></div>
+    <div class="internal-links">
+      <h4>Explore More Free Tools</h4>
+      <a href="/tools/">All Tools</a> <a href="/tools/webp-to-jpg/">WebP to JPG Converter</a> <a href="/tools/color-picker/">Image Color Picker</a> <a href="/tools/favicon-generator/">Favicon Generator</a> <a href="https://blog.yougrowonline.in/">Read Our Blog</a> <a href="/contact.html">Contact Us</a>
+    </div>
+  </div></section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div><h4>Services</h4><ul class="footer-links"><li><a href="/services.html">Web Development</a></li><li><a href="/services.html">Ecommerce Development</a></li><li><a href="/services.html">Custom Software</a></li><li><a href="/services.html">Digital Marketing</a></li><li><a href="/services.html">AI Solutions</a></li></ul></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="https://blog.yougrowonline.in/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div></div>
+    </div>
+  </footer>
+  <script>
+    function optimizeSVG() {
+      var input = document.getElementById('svgInput').value;
+      if (!input.trim()) { alert('Please paste SVG code first.'); return; }
+      var origSize = input.length;
+      var output = input;
+      // Remove XML declaration
+      output = output.replace(/<\?xml[^>]*\?>/gi, '');
+      // Remove comments
+      output = output.replace(/<!--[\s\S]*?-->/g, '');
+      // Remove doctype
+      output = output.replace(/<!DOCTYPE[^>]*>/gi, '');
+      // Remove editor metadata (Illustrator, Sketch, Inkscape, Figma)
+      output = output.replace(/\s+xmlns:?\w*="[^"]*"/gi, function(m) {
+        if (m.indexOf('xmlns="http://www.w3.org/2000/svg') !== -1) return m;
+        if (m.indexOf('xmlns:xlink="http://www.w3.org/1999/xlink') !== -1) return m;
+        return '';
+      });
+      output = output.replace(/\s+(data-name|data-version|id|class)="[^"]*"/gi, '');
+      output = output.replace(/\s+enable-background="[^"]*"/gi, '');
+      output = output.replace(/\s+version="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:serif="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:dc="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:cc="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:rdf="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:svg="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:x="[^"]*"/gi, '');
+      output = output.replace(/\s+xmlns:y="[^"]*"/gi, '');
+      // Remove empty groups
+      output = output.replace(/<g[^>]*>\s*<\/g>/gi, '');
+      // Remove redundant spaces
+      output = output.replace(/\s{2,}/g, ' ');
+      output = output.replace(/>\s+</g, '><');
+      output = output.trim();
+      var optSize = output.length;
+      var savings = origSize > 0 ? ((1 - optSize / origSize) * 100).toFixed(1) : 0;
+      document.getElementById('svgOutput').value = output;
+      document.getElementById('origSvgSize').textContent = formatSize(origSize);
+      document.getElementById('optSvgSize').textContent = formatSize(optSize);
+      document.getElementById('svgSavings').textContent = savings + '%';
+      document.getElementById('svgStats').style.display = 'flex';
+    }
+    function loadSVGFile(input) {
+      var file = input.files[0];
+      if (!file) return;
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('svgInput').value = e.target.result;
+        optimizeSVG();
+      };
+      reader.readAsText(file);
+    }
+    function copySVG() {
+      var text = document.getElementById('svgOutput').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(function() {
+        var btn = document.querySelector('.tool-interface .btn-primary:last-child');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        setTimeout(function(){ btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Optimized Code'; }, 2000);
+      });
+    }
+    function formatSize(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      var kb = bytes / 1024;
+      if (kb < 1024) return kb.toFixed(1) + ' KB';
+      return (kb / 1024).toFixed(2) + ' MB';
+    }
+  </script>
+  <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</body>
+</html>

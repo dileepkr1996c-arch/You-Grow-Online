@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Case Converter — UPPER lower Title camelCase | You Grow Online</title>
+  <meta name="description" content="Convert text between uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, and kebab-case instantly. Free online case converter for developers and writers.">
+  <meta name="keywords" content="case converter, text case converter, uppercase to lowercase, camelcase converter, snake case, kebab case, pascal case, free text tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/case-converter/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Case Converter — Transform Text Case Online">
+  <meta property="og:description" content="Convert text between uppercase, lowercase, title case, camelCase, PascalCase, snake_case, and kebab-case.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/case-converter/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Online Text Case Converter">
+  <meta name="twitter:description" content="Transform text to any case instantly. UPPERCASE, lowercase, Title Case, camelCase and more.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+  <style>
+    .case-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+    .case-btn { padding: 8px 18px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-primary); font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: var(--transition); font-family: var(--font-primary); }
+    .case-btn:hover { border-color: var(--accent-primary); color: var(--accent-primary); background: rgba(108,99,255,0.06); }
+    .case-btn.active { background: var(--accent-gradient); color: var(--white); border-color: transparent; }
+  </style>
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper">
+          <div class="logo-text">You <span>Grow</span> Online</div>
+          <span class="logo-tagline">Digital Solution Agency</span>
+        </div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a> <a href="/services.html" class="nav-link">Services</a> <a href="/portfolio.html" class="nav-link">Portfolio</a> <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="https://blog.yougrowonline.in/" class="nav-link">Blog</a> <a href="/about.html" class="nav-link">About</a> <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+<!-- Sub-Navigation Bar -->
+<div class="sub-nav-bar">
+  <ul class="sub-nav-links">
+    <li class="sub-nav-item"><a href="/tools/">Free Tools</a></li>
+    <li class="sub-nav-item"><a href="#">Web Solutions</a></li>
+    <li class="sub-nav-item"><a href="#">Mobile Apps</a></li>
+  </ul>
+</div>
+<section class="page-header"><div class="container"><h1>Free Case Converter</h1><p>Convert text between uppercase, lowercase, title case, sentence case, camelCase, PascalCase, snake_case, and kebab-case instantly.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="tool-interface">
+      <div class="form-group"><label for="caseInput">Enter your text</label><textarea id="caseInput" placeholder="Type or paste your text here..." rows="5" oninput="document.getElementById('caseOutput').value=this.value; autoConvert()"></textarea></div>
+      <div class="case-buttons" id="caseButtons">
+        <button class="case-btn" onclick="convertCase('upper')">UPPERCASE</button>
+        <button class="case-btn" onclick="convertCase('lower')">lowercase</button>
+        <button class="case-btn" onclick="convertCase('title')">Title Case</button>
+        <button class="case-btn" onclick="convertCase('sentence')">Sentence case</button>
+        <button class="case-btn" onclick="convertCase('camel')">camelCase</button>
+        <button class="case-btn" onclick="convertCase('pascal')">PascalCase</button>
+        <button class="case-btn" onclick="convertCase('snake')">snake_case</button>
+        <button class="case-btn" onclick="convertCase('kebab')">kebab-case</button>
+        <button class="case-btn" onclick="convertCase('constant')">CONSTANT_CASE</button>
+        <button class="case-btn" onclick="convertCase('alternating')">aLtErNaTiNg</button>
+        <button class="case-btn" onclick="convertCase('inverse')">InVeRsE</button>
+      </div>
+      <div class="form-group"><label>Converted Output</label><textarea id="caseOutput" rows="5" readonly style="background:var(--bg-secondary);"></textarea></div>
+      <button class="btn btn-primary" onclick="copyCaseOutput()"><i class="fa-regular fa-copy"></i> Copy Output</button>
+    </div>
+    <div class="guide-content">
+      <h2>Why Use a Case Converter Tool?</h2>
+      <p>A case converter is essential for developers, content writers, designers, and anyone who works with text. Programming languages use different naming conventions — JavaScript uses camelCase for variables, Python uses snake_case, and CSS uses kebab-case. Content writers need to switch between title case for headlines and sentence case for body text. Our free case converter handles all major text formats instantly, saving you time and eliminating manual retyping errors.</p>
+      <h3>Common Use Cases</h3>
+      <p>Developers use case converters when migrating code between languages or fixing inconsistent naming conventions. SEO professionals use title case for meta titles and page headings. Database administrators convert between naming standards. Even casual users find case converters useful for formatting text in documents, emails, and social media posts. Bookmark this tool and access it whenever you need to transform text.</p>
+    </div>
+                            <div class="tool-contact-form">
+              <div class="tool-contact-form-inner">
+                <div class="tool-contact-form-info">
+                  <h3>Get a Free Consultation</h3>
+                  <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+                  <div class="contact-info-item"><i class="fa-solid fa-envelope"></i> contact.yougrowonline@gmail.com</div>
+                  <div class="contact-info-item"><i class="fa-solid fa-phone"></i> +91 89718 35181</div>
+                </div>
+                <form class="contact-form-form tool-contact-form-fields" data-source="Tool">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Full Name *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                  </div>
+                  <div class="form-group">
+                    <select name="service" required>
+                      <option value="">Service Interested In *</option>
+                      <option value="website">Website Development</option>
+                      <option value="ecommerce">Ecommerce Development</option>
+                      <option value="software">Custom Software</option>
+                      <option value="marketing">Digital Marketing</option>
+                      <option value="ai">AI Solutions</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div></div></section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div><h4>Services</h4><ul class="footer-links"><li><a href="/services.html">Web Development</a></li><li><a href="/services.html">Ecommerce Development</a></li><li><a href="/services.html">Custom Software</a></li><li><a href="/services.html">Digital Marketing</a></li><li><a href="/services.html">AI Solutions</a></li></ul></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="https://blog.yougrowonline.in/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div></div>
+    </div>
+  </footer>
+  <script>
+    function convertCase(type) {
+      var input = document.getElementById('caseInput');
+      var output = document.getElementById('caseOutput');
+      var text = input.value;
+      if (!text) return;
+      var result = '';
+      switch(type) {
+        case 'upper': result = text.toUpperCase(); break;
+        case 'lower': result = text.toLowerCase(); break;
+        case 'title': result = text.replace(/\w\S*/g, function(t){ return t.charAt(0).toUpperCase() + t.substr(1).toLowerCase(); }); break;
+        case 'sentence': result = text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, function(c){ return c.toUpperCase(); }); break;
+        case 'camel': result = text.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, function(m, c){ return c.toUpperCase(); }); break;
+        case 'pascal': result = text.toLowerCase().replace(/(^\w|[^a-zA-Z0-9]+(\w))/g, function(m, c){ return c.toUpperCase(); }); break;
+        case 'snake': result = text.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '_').replace(/^_|_$/g, ''); break;
+        case 'kebab': result = text.toLowerCase().replace(/[^a-zA-Z0-9]+/g, '-').replace(/^-|-$/g, ''); break;
+        case 'constant': result = text.replace(/[^a-zA-Z0-9]+/g, '_').toUpperCase().replace(/^_|_$/g, ''); break;
+        case 'alternating': result = text.split('').map(function(c, i){ return i % 2 === 0 ? c.toLowerCase() : c.toUpperCase(); }).join(''); break;
+        case 'inverse': result = text.split('').map(function(c){ return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase(); }).join(''); break;
+      }
+      output.value = result;
+      // highlight active button
+      document.querySelectorAll('.case-btn').forEach(function(b){ b.classList.remove('active'); });
+      event.target.classList.add('active');
+    }
+    function autoConvert() {
+      var active = document.querySelector('.case-btn.active');
+      if (active) { var type = active.getAttribute('onclick').match(/'([^']+)'/)[1]; convertCase(type); }
+    }
+    function copyCaseOutput() {
+      var text = document.getElementById('caseOutput').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(function(){
+        var btn = document.querySelector('.tool-interface .btn-primary');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        setTimeout(function(){ btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Output'; }, 2000);
+      });
+    }
+  </script>
+  <script src="/tools/assets/js/tools-data.js"></script>
+  <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</body>
+</html>

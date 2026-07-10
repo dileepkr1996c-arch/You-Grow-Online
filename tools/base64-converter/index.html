@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Base64 Encoder Decoder — Encode Decode Online | You Grow Online</title>
+  <meta name="description" content="Encode text or files to Base64 format and decode Base64 strings back to readable text. Supports UTF-8 and file upload. Free online Base64 converter for developers.">
+  <meta name="keywords" content="base64 encoder, base64 decoder, base64 converter, encode to base64, decode base64, base64 file, free developer tools">
+  <link rel="canonical" href="https://yougrowonline.in/tools/base64-converter/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Base64 Encoder / Decoder — Convert Online">
+  <meta property="og:description" content="Encode text to Base64 or decode Base64 back to readable text. Supports UTF-8 and file upload. Free developer tool.">
+  <meta property="og:url" content="https://yougrowonline.in/tools/base64-converter/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80">
+  <meta property="og:site_name" content="You Grow Online">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Base64 Encoder Decoder Free">
+  <meta name="twitter:description" content="Encode any text to Base64 or decode Base64 strings instantly.">
+  <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/tools/assets/css/tools.css">
+  <style>
+    .base64-toolbar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .base64-file { display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-bottom: 12px; cursor: pointer; transition: var(--transition); }
+    .base64-file:hover { border-color: var(--accent-primary); }
+    .base64-file input[type="file"] { display: none; }
+    .char-count { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; text-align: right; }
+  </style>
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo"></div></div>
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="You Grow Online Home">
+        <img src="/assets/images/logo.png" alt="You Grow Online logo" width="40" height="40">
+        <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+      </a>
+      <nav class="nav-menu" aria-label="Main navigation">
+        <a href="/" class="nav-link">Home</a> <a href="/services.html" class="nav-link">Services</a> <a href="/portfolio.html" class="nav-link">Portfolio</a> <a href="/#pricing" class="nav-link">Pricing</a>
+        <a href="https://blog.yougrowonline.in/" class="nav-link">Blog</a> <a href="/about.html" class="nav-link">About</a> <a href="/contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme"><i class="fa-solid fa-sun"></i><i class="fa-solid fa-moon"></i></button>
+        <a href="/contact.html" class="nav-link nav-cta">Get a Quote</a>
+      </nav>
+      <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+<!-- Sub-Navigation Bar -->
+<div class="sub-nav-bar">
+  <ul class="sub-nav-links">
+    <li class="sub-nav-item"><a href="/tools/">Free Tools</a></li>
+    <li class="sub-nav-item"><a href="#">Web Solutions</a></li>
+    <li class="sub-nav-item"><a href="#">Mobile Apps</a></li>
+  </ul>
+</div>
+<section class="page-header"><div class="container"><h1>Free Base64 Encoder / Decoder</h1><p>Encode text or files to Base64 format and decode Base64 strings back to readable text. Supports UTF-8 characters and file upload. Essential for web developers.</p></div></section>
+  <section class="section"><div class="container">
+    <div class="tool-interface">
+      <div class="base64-toolbar">
+        <button class="btn btn-primary" onclick="encodeText()"><i class="fa-solid fa-lock"></i> Encode to Base64</button>
+        <button class="btn btn-secondary" onclick="decodeText()"><i class="fa-solid fa-unlock"></i> Decode from Base64</button>
+        <button class="btn btn-secondary" onclick="clearBase64()"><i class="fa-solid fa-eraser"></i> Clear</button>
+      </div>
+      <div class="base64-file" onclick="document.getElementById('b64FileInput').click()">
+        <i class="fa-solid fa-upload" style="color:var(--accent-primary);font-size:1.1rem;"></i>
+        <span style="flex:1;font-size:0.9rem;color:var(--text-secondary);">Upload a file to encode as Base64</span>
+        <span id="b64FileName" style="font-size:0.82rem;color:var(--text-muted);"></span>
+        <input type="file" id="b64FileInput" onchange="encodeFile(this)">
+      </div>
+      <div class="form-group"><label for="b64Input">Input</label><textarea id="b64Input" placeholder="Type text to encode, or paste Base64 string to decode..." rows="6" oninput="updateCharCount()"></textarea><div class="char-count" id="b64CharCount">0 characters</div></div>
+      <div class="form-group"><label>Output</label><textarea id="b64Output" rows="6" readonly style="background:var(--bg-secondary);font-family:Consolas,Monaco,monospace;font-size:0.82rem;"></textarea></div>
+      <button class="btn btn-primary" onclick="copyBase64()"><i class="fa-regular fa-copy"></i> Copy Output</button>
+    </div>
+    <div class="guide-content">
+      <h2>What is Base64 Encoding?</h2>
+      <p>Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format. It is commonly used when there is a need to encode binary data that needs to be stored and transferred over media designed to deal with textual data. Base64 is widely used in web development for embedding images in HTML/CSS (data URIs), sending binary data in JSON APIs, encoding authentication credentials (Basic Auth), and storing complex data in cookies or local storage.</p>
+      <p>The encoding process converts every 3 bytes of binary data into 4 ASCII characters, using a set of 64 characters (A-Z, a-z, 0-9, +, /) plus the = padding character. While Base64 increases data size by approximately 33%, it ensures data integrity across systems that may not handle raw binary data correctly. Our encoder supports UTF-8 text and file uploads, and our decoder can convert any valid Base64 string back to its original form.</p>
+      <h3>Common Base64 Use Cases</h3>
+      <p>Web developers use Base64 to embed small images directly in CSS or HTML (data:image/png;base64,...). API developers encode binary payloads in JSON. Email systems use Base64 for attachments (MIME). Security professionals use it for encoding tokens and keys. Data analysts encode files for transmission through text-only channels. Our tool handles all these scenarios with instant encode/decode and one-click copying.</p>
+    </div>
+                            <div class="tool-contact-form">
+              <div class="tool-contact-form-inner">
+                <div class="tool-contact-form-info">
+                  <h3>Get a Free Consultation</h3>
+                  <p>Tell us about your project and our team will get back to you within 24 hours.</p>
+                  <div class="contact-info-item"><i class="fa-solid fa-envelope"></i> contact.yougrowonline@gmail.com</div>
+                  <div class="contact-info-item"><i class="fa-solid fa-phone"></i> +91 89718 35181</div>
+                </div>
+                <form class="contact-form-form tool-contact-form-fields" data-source="Tool">
+                  <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Full Name *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email Address *" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Your Phone Number">
+                  </div>
+                  <div class="form-group">
+                    <select name="service" required>
+                      <option value="">Service Interested In *</option>
+                      <option value="website">Website Development</option>
+                      <option value="ecommerce">Ecommerce Development</option>
+                      <option value="software">Custom Software</option>
+                      <option value="marketing">Digital Marketing</option>
+                      <option value="ai">AI Solutions</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div class="form-group full-width">
+                    <textarea name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div></div></section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo" style="margin-bottom:14px;">
+            <img src="/assets/images/logo.png" alt="You Grow Online" width="36" height="36">
+            <div class="logo-wrapper"><div class="logo-text">You <span>Grow</span> Online</div><span class="logo-tagline">Digital Solution Agency</span></div>
+          </a>
+          <p>We help businesses grow online with modern websites, ecommerce stores, custom software, and data-driven marketing.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com/yougrowonline" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/yougrowonline" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/yougrowonline" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/918971835181" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div><h4>Services</h4><ul class="footer-links"><li><a href="/services.html">Web Development</a></li><li><a href="/services.html">Ecommerce Development</a></li><li><a href="/services.html">Custom Software</a></li><li><a href="/services.html">Digital Marketing</a></li><li><a href="/services.html">AI Solutions</a></li></ul></div>
+        <div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/portfolio.html">Portfolio</a></li><li><a href="https://blog.yougrowonline.in/">Blog</a></li><li><a href="/tools/">Free Tools</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:contact.yougrowonline@gmail.com"><i class="fa-regular fa-envelope" style="margin-right:6px;"></i>Email Us</a></li><li><a href="tel:+918971835181"><i class="fa-solid fa-phone" style="margin-right:6px;"></i>+91 89718 35181</a></li><li><a href="https://wa.me/918971835181" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 You Grow Online. All rights reserved.</p><div class="footer-bottom-links"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a></div></div>
+    </div>
+  </footer>
+  <script>
+    function encodeText() {
+      var input = document.getElementById('b64Input').value;
+      if (!input) { document.getElementById('b64Output').value = 'Please enter text to encode.'; return; }
+      try {
+        var encoded = btoa(unescape(encodeURIComponent(input)));
+        document.getElementById('b64Output').value = encoded;
+      } catch(e) {
+        document.getElementById('b64Output').value = 'Encoding error: ' + e.message;
+      }
+    }
+    function decodeText() {
+      var input = document.getElementById('b64Input').value.trim();
+      if (!input) { document.getElementById('b64Output').value = 'Please enter Base64 text to decode.'; return; }
+      try {
+        var decoded = decodeURIComponent(escape(atob(input)));
+        document.getElementById('b64Output').value = decoded;
+      } catch(e) {
+        document.getElementById('b64Output').value = 'Decoding error: Invalid Base64 string. ' + e.message;
+      }
+    }
+    function encodeFile(input) {
+      var file = input.files[0];
+      if (!file) return;
+      document.getElementById('b64FileName').textContent = file.name + ' (' + formatSize(file.size) + ')';
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var base64 = e.target.result.split(',')[1];
+        document.getElementById('b64Input').value = '(File: ' + file.name + ' encoded as Base64)';
+        document.getElementById('b64Output').value = base64;
+        updateCharCount();
+      };
+      reader.readAsDataURL(file);
+    }
+    function clearBase64() {
+      document.getElementById('b64Input').value = '';
+      document.getElementById('b64Output').value = '';
+      document.getElementById('b64FileName').textContent = '';
+      document.getElementById('b64FileInput').value = '';
+      updateCharCount();
+    }
+    function copyBase64() {
+      var text = document.getElementById('b64Output').value;
+      if (!text) return;
+      navigator.clipboard.writeText(text).then(function(){
+        var btn = document.querySelector('.tool-interface .btn-primary:last-child');
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+        setTimeout(function(){ btn.innerHTML = '<i class="fa-regular fa-copy"></i> Copy Output'; }, 2000);
+      });
+    }
+    function updateCharCount() {
+      var len = document.getElementById('b64Input').value.length;
+      document.getElementById('b64CharCount').textContent = len + ' characters';
+    }
+    function formatSize(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / 1048576).toFixed(1) + ' MB';
+    }
+  </script>
+  <script src="/tools/assets/js/tools-data.js"></script>
+  <script src="/assets/js/main.js"></script>
+<script src="/assets/js/sidebar.js"></script>
+</body>
+</html>

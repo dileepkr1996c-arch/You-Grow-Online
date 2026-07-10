@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="clinic-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="emerald-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#clinic-grad)" />
+
+  <!-- Grid mesh patterns -->
+  <g opacity="0.05" stroke="#ffffff" stroke-width="1.2">
+    <path d="M 0 0 C 200 100 400 50 800 150 M 0 100 C 300 200 500 150 800 250 M 0 200 C 100 300 600 250 800 350" fill="none" />
+  </g>
+
+  <!-- Clinic website viewport wireframe -->
+  <rect x="140" y="70" width="520" height="310" rx="12" fill="#111827" stroke="#047857" stroke-width="2" />
+  <rect x="140" y="70" width="520" height="35" rx="12" fill="#1f2937" />
+  
+  <!-- Window bullets -->
+  <circle cx="165" cy="88" r="4.5" fill="#ef4444" />
+  <circle cx="178" cy="88" r="4.5" fill="#f59e0b" />
+  <circle cx="191" cy="88" r="4.5" fill="#10b981" />
+  
+  <!-- Navbar link cards -->
+  <rect x="250" y="125" width="300" height="45" rx="8" fill="#1f2937" opacity="0.6" />
+  <circle cx="275" cy="147" r="10" fill="url(#emerald-grad)" />
+  <!-- Stethoscope icon inside logo circle representation -->
+  <path d="M 271 144 A 4 4 0 0 0 279 144" fill="none" stroke="#ffffff" stroke-width="1.5" />
+  <text x="295" y="152" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="13" fill="#ffffff">MEHTA CLINICS</text>
+
+  <!-- Schedule consultation dashboard mockup cards inside portal -->
+  <rect x="170" y="190" width="220" height="160" rx="8" fill="#1f2937" opacity="0.8" />
+  <text x="190" y="222" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="15" fill="#34d399">Doctors Schedule</text>
+  
+  <rect x="190" y="240" width="180" height="20" rx="4" fill="#111827" />
+  <rect x="196" y="246" width="60" height="8" rx="2" fill="#047857" />
+  <circle cx="354" cy="250" r="4" fill="#059669" />
+
+  <rect x="190" y="270" width="180" height="20" rx="4" fill="#111827" />
+  <rect x="196" y="276" width="80" height="8" rx="2" fill="#334155" />
+  <circle cx="354" cy="280" r="4" fill="#6b7280" />
+
+  <rect x="190" y="300" width="180" height="20" rx="4" fill="#111827" />
+  <rect x="196" y="306" width="70" height="8" rx="2" fill="#047857" />
+  <circle cx="354" cy="310" r="4" fill="#059669" />
+
+  <!-- Highlights visual cards -->
+  <rect x="410" y="190" width="220" height="160" rx="8" fill="#022c22" stroke="#059669" stroke-width="1.5" />
+  <text x="430" y="228" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="24" fill="#10b981">Ranked #1</text>
+  <text x="430" y="250" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#34d399">LOCAL SEO PRIMARY TERMS</text>
+  
+  <text x="430" y="280" font-family="'Inter', sans-serif" font-weight="500" font-size="10" fill="#a7f3d0">Google Maps index integrated</text>
+  <rect x="430" y="305" width="110" height="28" rx="14" fill="#059669" />
+  <text x="485" y="322" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#ffffff" text-anchor="middle">VIEW APPOINTMENT</text>
+</svg>
