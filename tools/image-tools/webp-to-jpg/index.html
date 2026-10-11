@@ -2,41 +2,154 @@
 <html lang="en">
 <head>
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23002577677/FooterAd1/Middle_ads', [[1, 1], [300, 250], [320, 50], [250, 250]], 'div-gpt-ad-1791693531155-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23002577677/FooterAd1', [[320, 480], [750, 200], [980, 120], [300, 250], [480, 320], [580, 400], [970, 250], [750, 300]], 'div-gpt-ad-1791656435298-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23002577677/news_website', [[1, 1], [250, 250], [300, 600]], 'div-gpt-ad-1791656123513-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
-  <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/23002577677/BOTTOM_ADS', [[750, 100], [970, 90], [300, 75], [728, 90], [468, 60], [300, 50], [300, 100]], 'div-gpt-ad-1791655639818-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
+  <script>
+    window.googletag = window.googletag || {cmd: []};
+    googletag.cmd.push(function() {
+      /* HEADER AD — /23002577677/FooterAd1 (top billboard) */
+      googletag.defineSlot('/23002577677/FooterAd1', [[970, 250], [750, 200], [980, 120], [300, 250]], 'div-gpt-ad-1791656435298-0')
+        .defineSizeMapping(googletag.sizeMapping()
+          .addSize([768, 0], [[970, 250], [750, 200], [980, 120]])
+          .addSize([0, 0], [[300, 250]])
+          .build())
+        .addService(googletag.pubads());
+
+      /* MIDDLE AD — /23002577677/FooterAd1/Middle_ads (in-tool, after results) */
+      googletag.defineSlot('/23002577677/FooterAd1/Middle_ads', [[300, 250], [320, 50], [250, 250]], 'div-gpt-ad-1791693531155-0')
+        .defineSizeMapping(googletag.sizeMapping()
+          .addSize([768, 0], [[300, 250], [250, 250]])
+          .addSize([0, 0], [[320, 50], [300, 250], [250, 250]])
+          .build())
+        .addService(googletag.pubads());
+
+      /* SIDEBAR AD — /23002577677/news_website (half-page) */
+      googletag.defineSlot('/23002577677/news_website', [[250, 250], [300, 600]], 'div-gpt-ad-1791656123513-0')
+        .defineSizeMapping(googletag.sizeMapping()
+          .addSize([768, 0], [[300, 600], [250, 250]])
+          .addSize([0, 0], [[250, 250]])
+          .build())
+        .addService(googletag.pubads());
+
+      /* BOTTOM AD — /23002577677/BOTTOM_ADS (leaderboard banner above footer) */
+      googletag.defineSlot('/23002577677/BOTTOM_ADS', [[750, 100], [970, 90], [300, 75], [728, 90], [468, 60], [300, 50], [300, 100]], 'div-gpt-ad-1791655639818-0')
+        .defineSizeMapping(googletag.sizeMapping()
+          .addSize([768, 0], [[970, 90], [750, 100], [728, 90], [468, 60]])
+          .addSize([0, 0], [[300, 50], [300, 75], [300, 100]])
+          .build())
+        .addService(googletag.pubads());
+
+      /* RIGHT STICKY AD — /23002577677/Sticky_Right_Side (GAM mein ye naya ad unit banayein; sizes: 160x600, 300x250) */
+      googletag.defineSlot('/23002577677/Sticky_Right_Side', [[160, 600], [300, 250]], 'div-gpt-ad-sticky-right')
+        .addService(googletag.pubads());
+
+      googletag.pubads().collapseEmptyDivs();
+      googletag.pubads().enableSingleRequest();
+      googletag.enableServices();
+    });
+  </script>
+  <style>
+    .ad-slot { margin: 24px auto; text-align: center; }
+    .ad-slot > div { margin: 0 auto; }
+    .ad-slot-header { max-width: 970px; }
+    .ad-slot-middle { max-width: 336px; }
+    .ad-slot-sidebar { max-width: 300px; }
+    .ad-slot-bottom-banner { max-width: 970px; }
+    @media (max-width: 767px) {
+      .ad-slot-header, .ad-slot-bottom-banner { max-width: 320px; }
+      .ad-slot { margin: 18px auto; }
+    }
+    /* RIGHT STICKY AD — fixed; scroll karne par bhi ek jagah rahega; sirf wide screens par dikhega */
+    .sticky-ad-right {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      z-index: 90;
+      display: none;
+      padding: 6px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .10);
+    }
+    @media (min-width: 1400px) {
+      .sticky-ad-right { display: block; }
+    }
+    .sticky-ad-right.is-hidden { display: none !important; }
+    .sticky-ad-right > div { margin: 0 auto; }
+    .sticky-ad-close {
+      position: absolute;
+      top: -9px;
+      right: -9px;
+      width: 22px;
+      height: 22px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: #111827;
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 22px;
+      text-align: center;
+      cursor: pointer;
+    }
+    /* VIDEO AD — out-stream player (play button par click karne par chalta hai) */
+    .video-ad-wrapper {
+      max-width: 640px;
+      margin: 28px auto;
+      padding: 10px;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      background: #111827;
+    }
+    .video-ad-player {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+      background: #000000;
+      border-radius: 8px;
+    }
+    .video-ad-player video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .video-ad-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #ffffff;
+      font-size: .9rem;
+      cursor: pointer;
+      background: rgba(17, 24, 39, .55);
+    }
+    .video-ad-overlay i { font-size: 54px; }
+    .video-ad-loader {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 30px;
+      background: rgba(0, 0, 0, .60);
+    }
+    .video-ad-label {
+      margin: 8px 0 0;
+      font-size: .72rem;
+      color: #9ca3af;
+      text-align: center;
+    }
+  </style>
+  <!-- IMA SDK — video ad ke liye -->
+  <script src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free WebP to JPG Converter — Convert WebP Images Online | You Grow Online</title>
@@ -85,15 +198,25 @@
     <li class="sub-nav-item"><a href="#">Mobile Apps</a></li>
   </ul>
 </div>
-<!-- HEADER AD (Recommended Size: 728x90 or 970x90) -->
+<!-- HEADER AD — /23002577677/FooterAd1 -->
   <div class="header-ad-container">
-    <!-- PASTE YOUR HEADER ADS CODE HERE -->
-    <!-- /23002577677/FooterAd1 -->
-<div id='div-gpt-ad-1791656435298-0' style='min-width: 300px; min-height: 120px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791656435298-0'); });
-  </script>
-</div>
+    <div class="ad-slot ad-slot-header">
+      <div id='div-gpt-ad-1791656435298-0'>
+        <script>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791656435298-0'); });
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE STICKY AD — scroll karne par bhi right side ki khali area mein fix rahega -->
+  <div class="sticky-ad-right" id="stickyAdRight">
+    <button class="sticky-ad-close" aria-label="Close ad">&times;</button>
+    <div id='div-gpt-ad-sticky-right'>
+      <script>
+        googletag.cmd.push(function() { googletag.display('div-gpt-ad-sticky-right'); });
+      </script>
+    </div>
   </div>
 
   <section class="page-header">
@@ -131,15 +254,16 @@
               <div class="stat-card"><div class="stat-value" id="convSize">-</div><div class="stat-label">JPG Size</div></div>
               <div class="stat-card"><div class="stat-value" id="qualityLabel">High</div><div class="stat-label">Quality</div></div>
             </div>
-            <!-- PASTE YOUR BOTTOM ADS CODE HERE -->
-            <!-- /23002577677/FooterAd1/Middle_ads -->
-<div id='div-gpt-ad-1791693531155-0' style='min-width: 250px; min-height: 50px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791693531155-0'); });
-  </script>
-</div>
-            
             <a class="btn btn-primary" id="downloadBtn" style="display:none;margin-top:16px;"><i class="fa-solid fa-download"></i> Download JPG</a>
+
+            <!-- MIDDLE AD — /23002577677/FooterAd1/Middle_ads -->
+            <div class="ad-slot ad-slot-middle">
+              <div id='div-gpt-ad-1791693531155-0'>
+                <script>
+                  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791693531155-0'); });
+                </script>
+              </div>
+            </div>
                                     <div class="tool-contact-form">
               <div class="tool-contact-form-inner">
                 <div class="tool-contact-form-info">
@@ -179,6 +303,19 @@
           <div class="guide-content">
             <h2>Complete Guide: Why Convert WebP to JPG and How It Helps Your Website</h2>
             <p>WebP is a modern image format developed by Google that offers superior compression compared to traditional formats like JPEG and PNG. WebP images are typically 25–35% smaller than equivalent JPEGs and provide both lossy and lossless compression with transparency support. However, despite these advantages, WebP is not universally supported across all platforms, browsers, and applications. Converting WebP to JPG ensures that your images can be viewed by every user, regardless of their browser or device, making JPG the safer choice for maximum compatibility.</p>
+
+            <!-- VIDEO AD — out-stream; play button par click karne par GAM se video ad chalta hai -->
+            <div class="video-ad-wrapper" id="videoAdWrapper">
+              <div class="video-ad-player" id="videoAdPlayer">
+                <video id="videoAdContent" playsinline webkit-playsinline preload="none"></video>
+                <div class="video-ad-overlay" id="videoAdOverlay">
+                  <i class="fa-solid fa-circle-play"></i>
+                  <span>Play Sponsored Video</span>
+                </div>
+                <div class="video-ad-loader" id="videoAdLoader"><i class="fa-solid fa-spinner fa-spin"></i></div>
+              </div>
+              <p class="video-ad-label">Advertisement</p>
+            </div>
             <p>JPG (Joint Photographic Experts Group) remains the most widely supported image format on the internet. It has been the industry standard for photographic images since 1992 and is compatible with every web browser, content management system, email client, photo editor, operating system, and social media platform. When you convert WebP to JPG, you trade some file size savings for guaranteed compatibility. For most real-world use cases — website content, email newsletters, social media posts, ecommerce product images, and document attachments — JPG is the reliable, universal choice that ensures your audience sees your images exactly as intended.</p>
             <h3>When Should You Convert WebP to JPG?</h3>
             <p>There are several scenarios where converting WebP images to JPG is recommended. If you are sending images via email, many email clients like Outlook, Apple Mail, and Gmail do not display WebP images correctly. If you are uploading images to a content management system (CMS) or ecommerce platform that does not support WebP, you will need JPG format. If you are sharing images with clients, colleagues, or stakeholders who may use older browsers or devices, JPG ensures everyone can view the files without issues. For print materials, JPG is the standard format accepted by printing services. Our converter maintains excellent visual quality during conversion, so your images look great in both formats.</p>
@@ -187,6 +324,14 @@
             <h3>How Our WebP to JPG Converter Works</h3>
             <p>Our free tool uses the HTML5 Canvas API to perform the conversion entirely within your browser. When you upload or drop a WebP image, the browser decodes the file, draws it onto a hidden canvas element at full resolution, and then exports it as a high-quality JPG image with a quality setting of approximately 92%. The tool displays side-by-side previews so you can compare the original WebP with the converted JPG, and it also shows file sizes for both formats. You can download the converted JPG with a single click. Because all processing happens locally, your images never leave your computer — the tool works even when you are offline.</p>
                       <aside class="sidebar">
+              <!-- SIDEBAR AD — /23002577677/news_website -->
+              <div class="ad-slot ad-slot-sidebar">
+                <div id='div-gpt-ad-1791656123513-0'>
+                  <script>
+                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791656123513-0'); });
+                  </script>
+                </div>
+              </div>
               <div class="sidebar-section">
                 <h4>Popular Tools</h4>
                 <ul id="sidebarTools"><li>Loading...</li></ul>
@@ -205,15 +350,15 @@
           </div>
         </div>
       </div>
-      <!-- BOTTOM AD (Recommended Size: 728x90 or 970x90) -->
+      <!-- BOTTOM AD — /23002577677/BOTTOM_ADS -->
       <div class="ad-slot-bottom">
-        <!-- PASTE YOUR BOTTOM ADS CODE HERE -->
-        <!-- /23002577677/news_website -->
-<div id='div-gpt-ad-1791656123513-0' style='min-width: 250px; min-height: 250px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791656123513-0'); });
-  </script>
-</div>
+        <div class="ad-slot ad-slot-bottom-banner">
+          <div id='div-gpt-ad-1791655639818-0'>
+            <script>
+              googletag.cmd.push(function() { googletag.display('div-gpt-ad-1791655639818-0'); });
+            </script>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -291,8 +436,73 @@
       return (bytes / 1048576).toFixed(2) + ' MB';
     }
   </script>
+  <script>
+  (function() {
+    /* Sticky ad close button */
+    var stickyClose = document.querySelector('.sticky-ad-close');
+    var stickyAd = document.getElementById('stickyAdRight');
+    if (stickyClose && stickyAd) {
+      stickyClose.addEventListener('click', function() { stickyAd.classList.add('is-hidden'); });
+    }
+
+    /* Video ad — Google IMA SDK se GAM ke VAST tag se chalta hai */
+    var wrapper = document.getElementById('videoAdWrapper');
+    var overlay = document.getElementById('videoAdOverlay');
+    var loader = document.getElementById('videoAdLoader');
+    var video = document.getElementById('videoAdContent');
+    if (!wrapper || !overlay || !window.google || !window.google.ima) {
+      if (wrapper) wrapper.style.display = 'none';
+      return;
+    }
+
+    /* NOTE: GAM mein '/23002577677/Video_Ad' video ad unit banayein — yeh tag usi unit ka hai */
+    var AD_TAG = 'https://pubads.g.doubleclick.net/gampad/ads?iu=/23002577677/Video_Ad&sz=640x360&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&correlator=';
+
+    var adsLoader = new google.ima.AdsLoader();
+    var adDisplayContainer = null;
+    var adsManager = null;
+
+    overlay.addEventListener('click', function() {
+      overlay.style.display = 'none';
+      loader.style.display = 'flex';
+      try {
+        if (!adDisplayContainer) {
+          adDisplayContainer = new google.ima.AdDisplayContainer(document.getElementById('videoAdPlayer'), video);
+          adDisplayContainer.initialize();
+        }
+        var request = new google.ima.AdsRequest();
+        request.adTagUrl = AD_TAG + Date.now();
+        request.linearAdSlotWidth = 640;
+        request.linearAdSlotHeight = 360;
+        adsLoader.requestAds(request);
+      } catch (e) {
+        loader.style.display = 'none';
+        overlay.style.display = 'flex';
+      }
+    });
+
+    adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, function(event) {
+      loader.style.display = 'none';
+      try {
+        adsManager = event.getAdsManager(video);
+        adsManager.addEventListener(google.ima.AdEvent.Type.ALL_ADS_COMPLETED, function() {
+          try { if (adsManager) adsManager.stop(); } catch (e) {}
+          wrapper.style.display = 'none';
+        });
+        adsManager.init(640, 360, google.ima.ViewMode.NORMAL);
+        adsManager.start();
+      } catch (e) {
+        wrapper.style.display = 'none';
+      }
+    });
+
+    adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, function() {
+      loader.style.display = 'none';
+      wrapper.style.display = 'none';
+    });
+  })();
+  </script>
   <script src="/assets/js/main.js"></script>
 <script src="/assets/js/sidebar.js"></script>
- </div>
 </body>
 </html>
